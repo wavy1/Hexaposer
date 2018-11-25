@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 hexaposer_server\node_modules
 hexaposer_server\.idea
+=======
+hexaposer_server/node_modules
+hexaposer_server/.idea
+>>>>>>> 3486c81... Added gitignore
 package-lock.json
+=======
+hexaposer_server/node_modules/*
+hexaposer_server/.idea/*
+hexaposer_server/package-lock.json
+>>>>>>> 109f035... Gitignore
