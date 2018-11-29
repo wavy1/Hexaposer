@@ -197,9 +197,9 @@
 
 /*-- //hexagonORANGE --*/
 
-/*-- hexagonLILA --*/
+/*-- hexagonPURPLE --*/
 
-.hexagonLILA {
+.hexagonPURPLE {
     width: 190px;
     height: 109px;
     position: absolute;
@@ -207,8 +207,8 @@
     background: #fff;
 }
 
-.hexagonLILA:before,
-.hexagonLILA:after {
+.hexagonPURPLE:before,
+.hexagonPURPLE:after {
     content: '';
     width: 100%;
     height: 100%;
@@ -217,17 +217,17 @@
     
 }
 
-.hexagonLILA:before {
+.hexagonPURPLE:before {
     transform: rotate(60deg);
 }
 
-.hexagonLILA:after {
+.hexagonPURPLE:after {
     transform: rotate(-60deg);
 }
 
-.hexagonLILA,
-.hexagonLILA:before,
-.hexagonLILA:after {
+.hexagonPURPLE,
+.hexagonPURPLE:before,
+.hexagonPURPLE:after {
     background: transparent;
     border: 1px solid #fff;
     background: rgba(100, 65, 165, 0.5);
@@ -235,7 +235,7 @@
     border-right: 1px solid #fff; */
 }
 
-/*-- //hexagonLILA --*/
+/*-- //hexagonPURPLE --*/
 
 /*-- hexagonGREY --*/
 
