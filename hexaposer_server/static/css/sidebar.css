@@ -3,18 +3,18 @@
 .side_menu {
     background: rgba(0, 0, 0, 0.74);
     height: 100vh;
-    left: -250px;
+    right: -300px;
     position: fixed;
     top: 0;
-    width: 250px;
+    width: 300px;
 }
 
 /* HAMBURGER STYLES ----- */
 
 .burger_box {
     display: block;
-    float: right;
-    margin-right: -45px;
+    float: left;
+    margin-left: -60px;
     margin-top: 38px;
 }
 
