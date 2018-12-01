@@ -1,6 +1,8 @@
 var express = require('express');
+var addon = require('bindings')('image_processor');
 var app = express();
 
+console.log(addon.hello());
 app.use(express.static('static'));
 
 //Serves all the request which includes /images in the url from Images folder
