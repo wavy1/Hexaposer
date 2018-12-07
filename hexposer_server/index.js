@@ -5,26 +5,17 @@ var fs = require('fs');
 app.engine('pug', require('pug').__express)
 app.set('view engine', 'pug');
 
+// open json and read to buffer
 let myjson = fs.readFileSync('info.json');
+// parsing the json data
 var test = JSON.parse(myjson);
+// creating the hexgons array
 var hexagons = [];
+// iterating the content from parsed json to the array
 for (var i = 0; i < test.Hexagons.length; i++){
   hexagons[i] = test.Hexagons[i];
 }
-console.log(hexagons[2]);
-//var data = JSON.parse(read(Hexagons));
-
-
-
-//console.log(read);
-//console.log(data);
-
-var arr1 =[];
-var arr2 =[];
-
-//arr1.push([0,data[0]]);
-//arr1.push([1,data[1]]);
-
+// next passing hexagons into pug
 
 app.get('/dynamic_view', function(req, res){
    res.render('dynamic', {
