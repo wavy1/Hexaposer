@@ -20,6 +20,15 @@ html {
     border-color: black black black #323232;
   }
 
+  .button.play:hover {
+    border-color: black black black #4c4c4c;
+  }
+
+  .button.play:active {
+    background-color:  black black black #4c4c4c;
+    transform: translateY(4px);
+  }
+
   .button.pause {
     width: 74px;
     height: 74px;
@@ -29,12 +38,16 @@ html {
     border-color:  #323232;
   }
 
-  .button.play:hover {
-    border-color: black black black #4c4c4c;
-  }
-
   .button.pause:hover {
     border-color: #4c4c4c;
   }
 
-
+  .button.pause:active {
+    width: 74px;
+    height: 74px;
+    background-color: black;
+    border-style: double;
+    border-width: 0px 0px 0px 74px;
+    border-color:  #323232;
+    transform:translateY(4px);
+  }

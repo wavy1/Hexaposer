@@ -1,0 +1,60 @@
+.slider {
+    margin: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #1dba23;
+    cursor: pointer;
+}
+
+#gainContainer {
+    background: #F79F79;
+    width: 100%;
+}
+
+#panningContainer {
+    background: #5b6f69;
+    width: 100%;
+}
+
+#distortionContainer {
+    background: #7883bf;
+    width: 100%;
+}
+
+#delayContainer {
+    background: #b6d9e7;
+    width: 100%;
+}
+
+#frequencyContainer {
+    background: #ebe07f;
+    width: 100%;
+}
+
+#kneeContainer {
+    background: #70c4ab;
+    width: 100%;
+}
+
+#attackContainer {
+    background: #cf96cc;
+    width: 100%;
+}

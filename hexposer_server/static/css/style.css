@@ -65,11 +65,19 @@ body {
 }
 
 .main-middle {
-    width: 50%;
+    position: absolute;
+    height: 200px;
+    width: 400px;
+    margin: -100px 0 0 -200px;
+    top: 30%;
+    left: 40%;
 }
 
 .main-left {
+    position: fixed;
     width: 25%;    
+    bottom: 20px;
+    left: 20px;
 }
 
 .main-right {
