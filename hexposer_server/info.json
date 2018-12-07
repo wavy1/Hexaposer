@@ -1,0 +1,19 @@
+{
+  "Hexagons": [
+    {
+      "color": "red",
+      "posX": 128,
+      "posY": 64
+    },
+    {
+      "color": "blue",
+      "posX": 192,
+      "posY": 64
+    },
+    {
+      "color": "green",
+      "posX": 192,
+      "posY": 32
+    }
+  ]
+}
