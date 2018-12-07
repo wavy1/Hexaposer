@@ -1,5 +1,5 @@
 var express = require('express');
-var addon = require('bindings')('image_processor');
+var addon = require('bindings')('ImageProcessor');
 var app = express();
 
 console.log(addon.hello());
