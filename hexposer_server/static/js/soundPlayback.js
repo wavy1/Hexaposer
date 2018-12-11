@@ -1,5 +1,5 @@
 var context = new AudioContext();
-var sound = new Audio("../sounds/sound1.mp3");
+var sound = new Audio("../static/sounds/sound1.mp3");
 var source = context.createMediaElementSource(sound);
 var playButton = document.getElementById("play");
 var pauseButton = document.getElementById("pause");
