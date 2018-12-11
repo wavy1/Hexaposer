@@ -7,13 +7,26 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "install": "node-gyp rebuild"
   },
-  "author": "",
+  "author": "Bager Bingoel, Wladimir Nabok, Klaus Bochmann",
   "license": "ISC",
   "dependencies": {
+    "bindings": "*",
     "express": "^4.16.4",
     "node-addon-api": "*",
-    "bindings": "*"
+    "pug": "^2.0.3"
   },
   "gypfile": true,
-  "description": ""
+  "description": "Hexaposer_Package",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wavy1/Hexaposer.git"
+  },
+  "keywords": [
+    "study"
+  ],
+  "bugs": {
+    "url": "https://github.com/wavy1/Hexaposer/issues"
+  },
+  "homepage": "https://github.com/wavy1/Hexaposer#readme"
 }
