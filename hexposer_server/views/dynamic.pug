@@ -1,6 +1,10 @@
 doctype html
 html(lang='zxx')
    head
+      // JS
+      script(src="../js/jquery-3.3.1.js")
+      script(src="../js/menu.js")
+      script(src="../js/SidebarNav.min.js")
 
       // CSS
       link(rel="stylesheet" href="../css/button.css" type="text/css" media="all")
@@ -29,17 +33,50 @@ html(lang='zxx')
             figure.hexagonPURPLE#hexPurple(min="0" max="100" value="75")
             figure.hexagonGREY#hexGrey(min="0" max="1000" value="3") 
             figure.hexagonPINK#hexPink
-               -function testo() 
-                  -document.getElementById("hexPink").style.visibility = "hidden";
-               
-            //figure.hexagonTURQUOISE#hexTurquoise
+            figure.hexagonTURQUOISE#hexTurquoise
+
+      .row
+         .main-middle
+            - for (var x = 0; x< hexArr.length; x++)
+               -var color = 'hexagon' +hexArr[x].color.toUpperCase();
+               figure(class=color)
 
          .main-left
+            // Slider: Nur zum Testen. Wird wieder gelöscht!
+            //div#gainContainer Gain
+               input#gainSlider.slider(type="range" min="0" max="100" value="10")
+               span#gainOutput 1.0 dB
+
+            //div#delayContainer Delay
+               input#delaySlider.slider(type="range" min="0" max="100" value="0")
+               span#delayOutput 0 sec
+
+            //div#panningContainer StereoPanning
+               input#panningSlider.slider(type="range" min="0" max="100" value="50")
+               span#panningOutput 0 LR
+
+            //div#distortionContainer Distortion
+               input#distortionSlider.slider(type="range" min="0" max="100" value="0")
+               span#distortionOutput 0
+
+            //div#frequencyContainer Frequency
+               input#frequencySlider.slider(type="range" min="0" max="20000" value="1000")
+               span#frequencyOutput 1000 HZ
+
+            //div#kneeContainer Knee
+               input#kneeSlider.slider(type="range" min="0" max="100" value="75")
+               span#kneeOutput 30 degree
+               
+            //div#attackContainer Attack
+               input#attackSlider.slider(type="range" min="0" max="1000" value="3")
+               span#attackOutput 0.003 sec
 
             // Play/PauseButton
             #playStopButton
                button#play.button.play
                button#pause.button.pause
+               //soundscript wird hier geladen damit der Listener sein target findet   
+               script(src="../js/soundPlayback.js")
 
             // Burger-Box
             .column.main-right
@@ -86,11 +123,6 @@ html(lang='zxx')
                            h2 CompressorNode (Attack)
                            h6
 
-      // JS
-      script(src="../js/jquery-3.3.1.js")
-      script(src="../js/menu.js")
-      script(src="../js/SidebarNav.min.js")
-      script(src="../js/soundPlayback.js")
 
-      .clear
-      
+
+                           .clear      
