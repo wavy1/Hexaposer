@@ -29,9 +29,6 @@ for (var i = 0; i < test.Hexagons.length; i++){
 app.get('/dynamic_view', function(req, res){
    res.render('dynamic', {
       hexArr: hexagons
-      //Hier müssten die .json Daten einfließen
-         //name: "TutorialsPoint", 
-         //url:"http://www.tutorialspoint.com"
    });
 });
 
