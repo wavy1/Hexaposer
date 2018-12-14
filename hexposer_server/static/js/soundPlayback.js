@@ -73,9 +73,20 @@ document.getElementById("hexOrange").addEventListener("input", function (e){
     //document.getElementById("frequencyOutput").innerHTML = this.value + " Hz";
 });
 
-biquadFilter.type = "lowpass";
+function HexPink() {
+var hexPink = document.getElementById("hexPink");
+    if(hexPink.style.visibility == "hidden") {
+        biquadFilter.type = "lowpass";
+    } 
+    else {
+        biquadFilter.type = "highpass";
+    }
+}
 
-biquadFilter.type = "notch";
+//var hexTurquoise = document.getElementById("hexTurqouise");
+  //  if(typeof hexTurquoise !== "undefined" && hexTurquoise.value == 'inacitve') {
+    //    biquadFilter.type = "highpass";
+    //}
 
 //compressor
 document.getElementById("hexPurple").addEventListener("input", function (e){
