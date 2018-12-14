@@ -1,7 +1,20 @@
 doctype html
 html(lang='zxx')
    head
-      title= 'Hexaposer'
+      
+   <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+   <link rel="stylesheet" href="css/hexagon.css" type="text/css" media="all" />
+   <link rel="stylesheet" href="css/button.css" type="text/css" media="all" />
+   <link rel="stylesheet" href="css/sidebar.css" type="text/css" media="all" />
+   <link rel="stylesheet" href="css/SidebarNav.min.css" type="text/css" media="all" />
+   <link rel="stylesheet" href="css/slider.css" type="text/css" media="all" />
+         title= 'Hexaposer'
+
    body
       h1=name
-      a(href = url) URL
+      .row
+         .main-middle
+            - for (var x = 0; x< hexArr.length; x++)
+               -var color = hexArr[x].color
+                  figure.hexagon#{color.toUpperCase()}
+   
