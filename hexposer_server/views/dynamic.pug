@@ -35,11 +35,11 @@ html(lang='zxx')
             figure.hexagonPINK#hexPink
             figure.hexagonTURQUOISE#hexTurquoise
 
-      .row
-         .main-middle
-            - for (var x = 0; x< hexArr.length; x++)
-               -var color = 'hexagon' +hexArr[x].color.toUpperCase();
-               figure(class=color)
+         // .row
+             .main-middle
+                  - for (var x = 0; x< hexArr.length; x++)
+                  -var color = 'hexagon' +hexArr[x].color.toUpperCase();
+                     figure(class=color)
 
          .main-left
             // Slider: Nur zum Testen. Wird wieder gelöscht!
@@ -77,7 +77,7 @@ html(lang='zxx')
                button#pause.button.pause
                //soundscript wird hier geladen damit der Listener sein target findet   
                script(src="../js/soundPlayback.js")
-
+            
             // Burger-Box
             .column.main-right
                .side_menu

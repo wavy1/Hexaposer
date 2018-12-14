@@ -22,7 +22,6 @@ distortion.connect(biquadFilter);
 biquadFilter.connect(compressor);
 compressor.connect(context.destination);
 
-
 //gain
 document.getElementById("hexBlue").addEventListener("input", function(e){
     var gainValue = (this.value / 20);
@@ -73,20 +72,18 @@ document.getElementById("hexOrange").addEventListener("input", function (e){
     //document.getElementById("frequencyOutput").innerHTML = this.value + " Hz";
 });
 
-function HexPink() {
-var hexPink = document.getElementById("hexPink");
-    if(hexPink.style.visibility == "hidden") {
-        biquadFilter.type = "lowpass";
-    } 
-    else {
-        biquadFilter.type = "highpass";
-    }
-}
+var HexPink = document.getElementById("hexPink");
+var HexTurqouise = document.getElementById("hexTurquoise");
 
-//var hexTurquoise = document.getElementById("hexTurqouise");
-  //  if(typeof hexTurquoise !== "undefined" && hexTurquoise.value == 'inacitve') {
-    //    biquadFilter.type = "highpass";
-    //}
+if($(HexPink).css('visibility') =='visible') {
+        biquadFilter.type = "lowpass";
+    } else if ($(HexTurqouise).css('visibility') =='visible') {
+        biquadFilter.type = "highpass";
+    } else if (($(HexPink).css('visibility') =='visible')($(HexTurqouise).css('visibility') =='visible')) {
+        biquadFilter.type = "lowshelf";    
+    } else if (($(HexPink).css('visibility') =='hidden')($(HexTurqouise).css('visibility') =='hidden')) {
+        biquadFilter.type !== "lowpass" && biquadFilter.type !== "highpass";
+}
 
 //compressor
 document.getElementById("hexPurple").addEventListener("input", function (e){
