@@ -6,6 +6,9 @@ app.engine('pug', require('pug').__express)
 app.set('view engine', 'pug');
 
 app.use(express.static('static'));
+
+
+//Serves all the request which includes /images in the url from Images folder
 app.use('/images', express.static(__dirname + '/static/images'));
 app.use('/fonts', express.static(__dirname + '/static/fonts'));
 app.use('/css', express.static(__dirname + '/static/css'));
