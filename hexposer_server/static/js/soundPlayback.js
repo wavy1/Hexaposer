@@ -91,6 +91,7 @@ document.getElementById("hexPurple").addEventListener("input", function (e){
     //document.getElementById("kneeOutput").innerHTML = this.value + " degree";
 });
 
+
 document.getElementById("hexGrey").addEventListener("input", function (e){
     compressor.attack.value = this.value;
     //document.getElementById("attackOutput").innerHTML = this.value + " sec";
