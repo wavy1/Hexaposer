@@ -1,5 +1,5 @@
 var context = new AudioContext();
-var sound = new Audio("../static/sounds/sound1.mp3");
+var sound = new Audio("../sounds/sound1.mp3");
 var source = context.createMediaElementSource(sound);
 var playButton = document.getElementById("play");
 var pauseButton = document.getElementById("pause");
@@ -24,23 +24,23 @@ compressor.connect(context.destination);
 
 
 //gain
-document.getElementById("gainSlider").addEventListener("input", function(e){
+document.getElementById("hexBlue").addEventListener("input", function(e){
     var gainValue = (this.value / 20);
-    document.getElementById("gainOutput").innerHTML = gainValue + " dB";
+    //document.getElementById("gainOutput").innerHTML = gainValue + " dB";
     gain.gain.value = gainValue;
 });
 
 //delay
-document.getElementById("delaySlider").addEventListener("input", function (e) {
+document.getElementById("hexYellow").addEventListener("input", function (e) {
     var delayValue = (this.value / 25);
-    document.getElementById("delayOutput").innerHTML = delayValue + " sec";
+    //document.getElementById("delayOutput").innerHTML = delayValue + " sec";
     delay.delayTime.value = delayValue;
 });
 
 //stereoPanner
-document.getElementById("panningSlider").addEventListener("input", function (e) {
+document.getElementById("hexGreen").addEventListener("input", function (e) {
     var panValue = (this.value - 50) / 50;
-    document.getElementById("panningOutput").innerHTML = panValue + " LR";
+    //document.getElementById("panningOutput").innerHTML = panValue + " LR";
     stereoPanner.pan.value = panValue;
 });
 
@@ -62,15 +62,15 @@ function makeDistortionCurve(amount) {
     return curve;
   };
 
-document.getElementById("distortionSlider").addEventListener("input", function() {
-    document.getElementById("distortionOutput").innerHTML = this.value;
+document.getElementById("hexRed").addEventListener("input", function() {
+    //document.getElementById("distortionOutput").innerHTML = this.value;
     distortion.curve = makeDistortionCurve(Number(this.value));
 });
 
 //biquadFilter
-document.getElementById("frequencySlider").addEventListener("input", function (e){
+document.getElementById("hexOrange").addEventListener("input", function (e){
     biquadFilter.frequency.value = this.value;
-    document.getElementById("frequencyOutput").innerHTML = this.value + " Hz";
+    //document.getElementById("frequencyOutput").innerHTML = this.value + " Hz";
 });
 
 biquadFilter.type = "lowpass";
@@ -78,14 +78,14 @@ biquadFilter.type = "lowpass";
 biquadFilter.type = "notch";
 
 //compressor
-document.getElementById("kneeSlider").addEventListener("input", function (e){
+document.getElementById("hexPurple").addEventListener("input", function (e){
     compressor.knee.value = this.value;
-    document.getElementById("kneeOutput").innerHTML = this.value + " degree";
+    //document.getElementById("kneeOutput").innerHTML = this.value + " degree";
 });
 
-document.getElementById("attackSlider").addEventListener("input", function (e){
+document.getElementById("hexGrey").addEventListener("input", function (e){
     compressor.attack.value = this.value;
-    document.getElementById("attackOutput").innerHTML = this.value + " sec";
+    //document.getElementById("attackOutput").innerHTML = this.value + " sec";
 });
 
 

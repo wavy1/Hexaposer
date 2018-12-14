@@ -1,9 +1,9 @@
 /*-- hexagonBLUE --*/
 
 .hexagonBLUE {
-    width: 190px;
-    height: 109px;
-   /*position: absolute*/
+    width: 96px;
+    height: 53px;
+    position: absolute;
     transform:  translate(0%, 0%);
     background: #fff;
 }
@@ -40,10 +40,10 @@
 /*-- hexagonYELLOW --*/
 
 .hexagonYELLOW {
-    width: 190px;
-    height: 109px;
+    width: 96px;
+    height: 53px;
     position: absolute;
-    transform:  translate(50%, 50%);
+    transform:  translate(100%, 0%);
     background: #fff;
 }
 
@@ -80,8 +80,8 @@
 /*-- hexagonGREEN --*/
 
 .hexagonGREEN {
-    width: 190px;
-    height: 109px;
+    width: 96px;
+    height: 53px;
     position: absolute;
     transform:  translate(100%, -100%);
     background: #fff;
@@ -120,8 +120,8 @@
 /*-- hexagonRED --*/
 
 .hexagonRED {
-    width: 190px;
-    height: 109px;
+    width: 96px;
+    height: 53px;
     position: absolute;
     transform:  translate(150%, 50%);
     background: #fff;
@@ -160,8 +160,8 @@
 /*-- hexagonORANGE --*/
 
 .hexagonORANGE {
-    width: 190px;
-    height: 109px;
+    width: 96px;
+    height: 53px;
     position: absolute;
     transform:  translate(200%, -100%);
     background: #fff;
@@ -200,8 +200,8 @@
 /*-- hexagonPURPLE --*/
 
 .hexagonPURPLE {
-    width: 190px;
-    height: 109px;
+    width: 96px;
+    height: 53px;
     position: absolute;
     transform:  translate(250%, 50%);
     background: #fff;
@@ -240,8 +240,8 @@
 /*-- hexagonGREY --*/
 
 .hexagonGREY {
-    width: 190px;
-    height: 109px;
+    width: 96px;
+    height: 53px;
     position: absolute;
     transform:  translate(300%, -100%);
     background: #fff;
@@ -280,8 +280,8 @@
 /*-- hexagonPINK --*/
 
 .hexagonPINK {
-    width: 190px;
-    height: 109px;
+    width: 96px;
+    height: 53px;
     position: absolute;
     transform:  translate(100%, 200%);
     background: #fff;
@@ -316,3 +316,43 @@
 }
 
 /*-- //hexagonPINK --*/
+
+/*-- hexagonTURQUOISE --*/
+
+.hexagonTURQUOISE {
+    width: 96px;
+    height: 53px;
+    position: absolute;
+    transform:  translate(200%, 200%);
+    background: #fff;
+}
+
+.hexagonTURQUOISE:before,
+.hexagonTURQUOISE:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    
+}
+
+.hexagonTURQUOISE:before {
+    transform: rotate(60deg);
+}
+
+.hexagonTURQUOISE:after {
+    transform: rotate(-60deg);
+}
+
+.hexagonTURQUOISE,
+.hexagonTURQUOISE:before,
+.hexagonTURQUOISE:after {
+    background: transparent;
+    border: 1px solid #fff;
+    background: rgba(64, 224, 208, 0.5);
+    /* border-left: 1px solid #fff;
+    border-right: 1px solid #fff; */
+}
+
+/*-- //hexagonTURQUOISE --*/
