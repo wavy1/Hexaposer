@@ -292,7 +292,7 @@
     position: absolute;
     transform:  translate(100%, 300%);
     background: #fff;
-    display: hidden;
+    visibility: visible;
 }
 
 .hexagonPINK:before,
