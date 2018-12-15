@@ -7,43 +7,60 @@ var isPlaying = false;
 sound.loop = true;
 
 var gain = context.createGain();
-var stereoPanner = context.createStereoPanner();
 var delay = context.createDelay(4.0);
-var biquadFilter = context.createBiquadFilter();
+var stereoPanner = context.createStereoPanner();
 var distortion = context.createWaveShaper();
-var oscillator = context.createOscillator();
-var compressor = context.createDynamicsCompressor();
+var biquadFilter = context.createBiquadFilter();
+//var compressor = context.createDynamicsCompressor();
 
 source.connect(gain);
 gain.connect(delay);
 delay.connect(stereoPanner);
 stereoPanner.connect(distortion);
 distortion.connect(biquadFilter);
-biquadFilter.connect(compressor);
-compressor.connect(context.destination);
+biquadFilter.connect(context.destination);
+// biquadFilter.connect(compressor);
+//compressor.connect(context.destination);
 
-//gain
-document.getElementById("hexBlue").addEventListener("input", function(e){
-    var gainValue = (this.value / 20);
-    //document.getElementById("gainOutput").innerHTML = gainValue + " dB";
+var HexBlue = document.getElementById("hexBlue");
+var HexYellow = document.getElementById("hexYellow");
+var HexGreen = document.getElementById("hexGreen");
+var HexRed = document.getElementById("hexRed");
+var HexOrange = document.getElementById("hexOrange");
+var HexPink = document.getElementById("hexPink");
+var HexTurqouise = document.getElementById("hexTurquoise");
+var HexPurple = document.getElementById("hexPurple");
+var HexGrey = document.getElementById("hexGrey");
+
+//GAIN
+
+if($(HexBlue).css('visibility') =='visible') {
+    var gainValue = 1;  //Je höher, desto lauter
     gain.gain.value = gainValue;
-});
+} else if ($(HexBlue).css('visibility') =='hidden') {
+    gain.gain.value = gainValue.disabled;
+}
 
-//delay
-document.getElementById("hexYellow").addEventListener("input", function (e) {
-    var delayValue = (this.value / 25);
-    //document.getElementById("delayOutput").innerHTML = delayValue + " sec";
+//DELAY
+
+if($(HexYellow).css('visibility') =='visible') {
+    var delayValue = 0; //0Sek nach Klick auf dem PlayButton Sound ausgespielt
     delay.delayTime.value = delayValue;
-});
+} else if ($(HexYellow).css('visibility') =='hidden') {
+    delay.delayTime.value = delayValue.disabled;
+}
 
-//stereoPanner
-document.getElementById("hexGreen").addEventListener("input", function (e) {
-    var panValue = (this.value - 50) / 50;
-    //document.getElementById("panningOutput").innerHTML = panValue + " LR";
+//STEREOPANNER
+
+if($(HexGreen).css('visibility') =='visible') {
+    var panValue = 0;   //-1=Links, 0=Normal, +1=Rechts
     stereoPanner.pan.value = panValue;
-});
+} else if ($(HexGreen).css('visibility') =='hidden') {
+    stereoPanner.pan.value = panValue.disabled;
+}
 
-//distortion
+//DISTORTION
+
 distortion.curve = makeDistortionCurve(0);
 distortion.oversample = "4x";
 
@@ -61,42 +78,49 @@ function makeDistortionCurve(amount) {
     return curve;
   };
 
-document.getElementById("hexRed").addEventListener("input", function() {
-    //document.getElementById("distortionOutput").innerHTML = this.value;
+if($(HexRed).css('visibility') =='visible') {
+    distortion.curve.disabled;
+} else if ($(HexRed).css('visibility') =='hidden') {
     distortion.curve = makeDistortionCurve(Number(this.value));
-});
-
-//biquadFilter
-document.getElementById("hexOrange").addEventListener("input", function (e){
-    biquadFilter.frequency.value = this.value;
-    //document.getElementById("frequencyOutput").innerHTML = this.value + " Hz";
-});
-
-var HexPink = document.getElementById("hexPink");
-var HexTurqouise = document.getElementById("hexTurquoise");
-
-if($(HexPink).css('visibility') =='visible') {
-        biquadFilter.type = "lowpass";
-    } else if ($(HexTurqouise).css('visibility') =='visible') {
-        biquadFilter.type = "highpass";
-    } else if (($(HexPink).css('visibility') =='visible')($(HexTurqouise).css('visibility') =='visible')) {
-        biquadFilter.type = "lowshelf";    
-    } else if (($(HexPink).css('visibility') =='hidden')($(HexTurqouise).css('visibility') =='hidden')) {
-        biquadFilter.type !== "lowpass" && biquadFilter.type !== "highpass";
 }
 
-//compressor
-document.getElementById("hexPurple").addEventListener("input", function (e){
-    compressor.knee.value = this.value;
-    //document.getElementById("kneeOutput").innerHTML = this.value + " degree";
-});
+//BIQUADFILTER.FREQUENCY
 
+if($(HexOrange).css('visibility') =='visible') {
+    biquadFilter.frequency.value = 350; //350=Standartwert -Es sind keine Veränderungen in der Soundausgabe zu hören
+} else if ($(HexOrange).css('visibility') =='hidden') {
+    biquadFilter.frquency.value.disabled;
+}
 
-document.getElementById("hexGrey").addEventListener("input", function (e){
-    compressor.attack.value = this.value;
-    //document.getElementById("attackOutput").innerHTML = this.value + " sec";
-});
+//BIQUADFILTER.TYPE = "LOWPASS" AND "HIGHPASS" AND "LOWSHELF"
 
+if($(HexPink).css('visibility') =='visible') {
+    biquadFilter.type = "lowpass";
+} else if ($(HexTurqouise).css('visibility') =='visible') {
+    biquadFilter.type = "highpass";
+} else if (($(HexPink).css('visibility') =='visible')($(HexTurqouise).css('visibility') =='visible')) {
+    biquadFilter.type = "lowshelf";    
+} else if (($(HexPink).css('visibility') =='hidden')($(HexTurqouise).css('visibility') =='hidden')) {
+    biquadFilter.type !== "lowpass" && biquadFilter.type !== "highpass";
+}
+
+//COMPRESSOR.KNEE
+
+// if($(HexPurple).css('visibility') =='visible') {
+//     compressor.knee.value = 5000;
+// } else if ($(HexPurple).css('visibility') =='hidden') {
+//     compressor.knee.value.disabled;
+// }
+
+//COMPRESSOR.ATTACK
+
+// if($(HexGrey).css('visibility') =='visible') {
+//     compressor.attack.value = 5000;
+// } else if ($(HexPurple).css('visibility') =='hidden') {
+//     compressor.attack.value.disabled;
+// }
+
+//PLAY/STOP-BUTTON
 
 playStopButton.addEventListener("click", function() {
     if (isPlaying) {

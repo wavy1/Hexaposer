@@ -210,7 +210,7 @@
     position: absolute;
     transform:  translate(150%, 150%);
     background: #fff;
-    visibility: visible;
+    visibility: hidden;
 }
 
 .hexagonPURPLE:before,
@@ -251,7 +251,7 @@
     position: absolute;
     transform:  translate(250%, 150%);
     background: #fff;
-    visibility: visible;
+    visibility: hidden;
 }
 
 .hexagonGREY:before,
