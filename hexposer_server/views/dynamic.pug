@@ -81,8 +81,9 @@ html(lang='zxx')
             #playStopButton
                button#play.button.play
                button#pause.button.pause
-               //soundscript wird hier geladen damit der Listener sein target findet   
+               //Soundscript wird hier geladen damit der Listener sein target findet   
                script(src="../js/soundPlayback.js")
+               script(src="../js/hexHidden.js")
             
             // Burger-Box
             .column.main-right
@@ -102,33 +103,25 @@ html(lang='zxx')
                            h2 MediaElementSourceNode
                            h6 Mit der MediaElementSourceNode-Schnittstelle können ein oder mehrere Ton/Töne hinzugefügt werden.
                         li.treeview
-                           h2 GainNode
+                           h2 GainNode (Blau)
                            h6 Mit der GainNode-Schnittstelle können Lautstärkeänderungen vorgenommen werden.
                         li.treeview
-                           h2 DelayNode
+                           h2 DelayNode (Gelb)
                            h6 Mit der DelayNode-Schnittstelle kann eine Verzögerung hinzugefügt werden. 
                         li.treeview
-                           h2 StereoPanningNode
+                           h2 StereoPanningNode (Grün)
                            h6 Die PannerNode-Schnittstelle entscheidet aus welcher Richtung die Soundausgabe kommt.
                         li.treeview
-                           h2 WaveshaperNode
+                           h2 WaveshaperNode (Rot)
                            h6 Mit dem WaveshaperNode-Modul werden Audiosignale mit einer dynamischen Verzerrung hinterlegt.
                         li.treeview
-                           h2 BiquadFilterNode (Frequenz)
-                           h6
+                           h2 BiquadFilterNode.Frequenz (Orange)
+                           h6 
                         li.treeview
-                           h2 BiquadFilterNode Typ:Lowpass
+                           h2 BiquadFilterNode Typ:Lowpass (Pink)
                            h6 Mit der BiquadFilterNode-Schnittstelle(Typ:Lowpass) werden Signale mit Frequenzen unterhalb ihrer Grenzfrequenz ungeschwächt passieren gelassen, während Anteile mit höherer Frequenzen gedämpft werden.
                         li.treeview
-                           h2 BiquadFilterNode Typ:Notch
-                           h6 Mit der BiquadFilterNode-Schnittstelle(Typ:Notch) werden Signale mit Frequenzen unterhalb ihrer Grenzfrequenz ungeschwächt passieren gelassen, während Anteile mit höherer Frequenzen gedämpft werden.
-                        li.treeview
-                           h2 CompressorNode (Knee)
-                           h6
-                        li.treeview
-                           h2 CompressorNode (Attack)
-                           h6
-
-
+                           h2 BiquadFilterNode Typ:Highpass (Türkis)
+                           h6 Mit der BiquadFilterNode-Schnittstelle(Typ:Highpass) werden Signale mit Frequenzen oberhalb ihrer Grenzfrequenz ungeschwächt passieren gelassen, während Anteile mit niedrigen Frequenzen gedämpft werden.
 
                            .clear      

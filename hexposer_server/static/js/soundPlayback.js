@@ -28,9 +28,9 @@ var HexGreen = document.getElementById("hexGreen");
 var HexRed = document.getElementById("hexRed");
 var HexOrange = document.getElementById("hexOrange");
 var HexPink = document.getElementById("hexPink");
-var HexTurqouise = document.getElementById("hexTurquoise");
-var HexPurple = document.getElementById("hexPurple");
-var HexGrey = document.getElementById("hexGrey");
+var HexTurquoise = document.getElementById("hexTurquoise");
+//var HexPurple = document.getElementById("hexPurple");
+//var HexGrey = document.getElementById("hexGrey");
 
 //GAIN
 
@@ -38,16 +38,16 @@ if($(HexBlue).css('visibility') =='visible') {
     var gainValue = 1;  //Je höher, desto lauter
     gain.gain.value = gainValue;
 } else if ($(HexBlue).css('visibility') =='hidden') {
-    gain.gain.value = gainValue.disabled;
+    //gain.gain.value = gainValue.disabled;
 }
 
 //DELAY
 
 if($(HexYellow).css('visibility') =='visible') {
-    var delayValue = 0; //0Sek nach Klick auf dem PlayButton Sound ausgespielt
+    var delayValue = 0; //0Sek nach Klick auf dem PlayStopButton wird Sound abgespielt oder pausiert
     delay.delayTime.value = delayValue;
 } else if ($(HexYellow).css('visibility') =='hidden') {
-    delay.delayTime.value = delayValue.disabled;
+    //delay.delayTime.value = delayValue.disabled;
 }
 
 //STEREOPANNER
@@ -56,7 +56,7 @@ if($(HexGreen).css('visibility') =='visible') {
     var panValue = 0;   //-1=Links, 0=Normal, +1=Rechts
     stereoPanner.pan.value = panValue;
 } else if ($(HexGreen).css('visibility') =='hidden') {
-    stereoPanner.pan.value = panValue.disabled;
+    //stereoPanner.pan.value = panValue.disabled;
 }
 
 //DISTORTION
@@ -81,26 +81,26 @@ function makeDistortionCurve(amount) {
 if($(HexRed).css('visibility') =='visible') {
     distortion.curve.disabled;
 } else if ($(HexRed).css('visibility') =='hidden') {
-    distortion.curve = makeDistortionCurve(Number(this.value));
+    //distortion.curve = makeDistortionCurve(Number(this.value));
 }
 
 //BIQUADFILTER.FREQUENCY
 
 if($(HexOrange).css('visibility') =='visible') {
-    biquadFilter.frequency.value = 350; //350=Standartwert -Es sind keine Veränderungen in der Soundausgabe zu hören
+    biquadFilter.frequency.value = 350; //350 = Standartwert = Es sind keine Veränderungen in der Soundausgabe zu hören
 } else if ($(HexOrange).css('visibility') =='hidden') {
-    biquadFilter.frquency.value.disabled;
+    //biquadFilter.frquency.value.disabled;
 }
 
 //BIQUADFILTER.TYPE = "LOWPASS" AND "HIGHPASS" AND "LOWSHELF"
 
 if($(HexPink).css('visibility') =='visible') {
     biquadFilter.type = "lowpass";
-} else if ($(HexTurqouise).css('visibility') =='visible') {
+} else if ($(HexTurquoise).css('visibility') =='visible') {
     biquadFilter.type = "highpass";
-} else if (($(HexPink).css('visibility') =='visible')($(HexTurqouise).css('visibility') =='visible')) {
+} else if (($(HexPink).css('visibility') =='visible')($(HexTurquoise).css('visibility') =='visible')) {
     biquadFilter.type = "lowshelf";    
-} else if (($(HexPink).css('visibility') =='hidden')($(HexTurqouise).css('visibility') =='hidden')) {
+} else if (($(HexPink).css('visibility') =='hidden')($(HexTurquoise).css('visibility') =='hidden')) {
     biquadFilter.type !== "lowpass" && biquadFilter.type !== "highpass";
 }
 
