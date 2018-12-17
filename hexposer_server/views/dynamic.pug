@@ -1,20 +1,127 @@
 doctype html
 html(lang='zxx')
    head
+      //meta
+      meta(charset='utf-8')
+      meta(http-equiv='X-UA-Compatible', content='IE=edge')
+      meta(name='HexHex', content='Other Hex')
+      meta(name='viewport', content='width=device-width, initial-scale=1')
       
-   <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-   <link rel="stylesheet" href="css/hexagon.css" type="text/css" media="all" />
-   <link rel="stylesheet" href="css/button.css" type="text/css" media="all" />
-   <link rel="stylesheet" href="css/sidebar.css" type="text/css" media="all" />
-   <link rel="stylesheet" href="css/SidebarNav.min.css" type="text/css" media="all" />
-   <link rel="stylesheet" href="css/slider.css" type="text/css" media="all" />
-         title= 'Hexaposer'
+      // JS
+      script(src="../js/jquery-3.3.1.js")
+      script(src="../js/menu.js")
+      //script(src="../js/SidebarNav.min.js")
+
+      // CSS
+      link(rel="stylesheet" href="../css/button.css" type="text/css" media="all")
+      link(rel="stylesheet" href="../css/hexagon.css" type="text/css" media="all")
+      link(rel="stylesheet" href="../css/sidebar.css" type="text/css" media="all")
+      // link(rel="stylesheet" href="../css/SidebarNav.min.css" type="text/css" media="all")
+      link(rel="stylesheet" href="../css/slider.css" type="text/css" media="all")
+      link(rel="stylesheet" href="../css/style.css" type="text/css" media="all")
+      
+      title .: Hexaposer :. Bager Bingöl, Wladimir Nabok und Klaus Bochmann
+
+      // Logo
+      div.logo
+         img(src="../images/logo2.png")
 
    body
-      h1=name
-      .row
+
+      .row 
+         // Hexagone
          .main-middle
-            - for (var x = 0; x< hexArr.length; x++)
-               -var color = hexArr[x].color
-                  figure.hexagon#{color.toUpperCase()}
-   
+            figure.hexagonBLUE#hexBlue(min="0" max="100" value="10")
+            figure.hexagonYELLOW#hexYellow(min="0" max="100" value="0")
+            figure.hexagonGREEN#hexGreen(min="0" max="100" value="50")
+            figure.hexagonRED#hexRed(min="0" max="100" value="0")
+            figure.hexagonORANGE#hexOrange(min="0" max="20000" value="1000")
+            figure.hexagonPURPLE#hexPurple(min="0" max="100" value="75")
+            figure.hexagonGREY#hexGrey(min="0" max="1000" value="3") 
+            figure.hexagonPINK#hexPink
+            figure.hexagonTURQUOISE#hexTurquoise
+
+         // .row
+             .main-middle
+                  - for (var x = 0; x< hexArr.length; x++)
+                  -var color = 'hexagon' +hexArr[x].color.toUpperCase();
+                     figure(class=color)
+
+         .main-left
+            // Slider: Nur zum Testen. Wird wieder gelöscht!
+            //div#gainContainer Gain
+               input#gainSlider.slider(type="range" min="0" max="100" value="10")
+               span#gainOutput 1.0 dB
+
+            //div#delayContainer Delay
+               input#delaySlider.slider(type="range" min="0" max="100" value="0")
+               span#delayOutput 0 sec
+
+            //div#panningContainer StereoPanning
+               input#panningSlider.slider(type="range" min="0" max="100" value="50")
+               span#panningOutput 0 LR
+
+            //div#distortionContainer Distortion
+               input#distortionSlider.slider(type="range" min="0" max="100" value="0")
+               span#distortionOutput 0
+
+            //div#frequencyContainer Frequency
+               input#frequencySlider.slider(type="range" min="0" max="20000" value="1000")
+               span#frequencyOutput 1000 HZ
+
+            //div#kneeContainer Knee
+               input#kneeSlider.slider(type="range" min="0" max="100" value="75")
+               span#kneeOutput 30 degree
+               
+            //div#attackContainer Attack
+               input#attackSlider.slider(type="range" min="0" max="1000" value="3")
+               span#attackOutput 0.003 sec
+
+            // Play/PauseButton
+            #playStopButton
+               button#play.button.play
+               button#pause.button.pause
+               //Soundscript wird hier geladen damit der Listener sein target findet   
+               script(src="../js/soundPlayback.js")
+               script(src="../js/hexHidden.js")
+            
+            // Burger-Box
+            .column.main-right
+               .side_menu
+                  .burger_box
+                     .menu-icon-container
+                        a.menu-icon.js-menu_toggle.closed(href="#")
+                           span.menu-icon_box
+                              span.menu-icon_line.menu-icon_line--1
+                              span.menu-icon_line.menu-icon_line--2
+                              span.menu-icon_line.menu-icon_line--3
+
+                  // Sidebar-Menu
+                  .container
+                     ul.sidebar-menu
+                        li.treeview
+                           h2 MediaElementSourceNode
+                           h6 Mit der MediaElementSourceNode-Schnittstelle können ein oder mehrere Ton/Töne hinzugefügt werden.
+                        li.treeview
+                           h2 GainNode (Blau)
+                           h6 Mit der GainNode-Schnittstelle können Lautstärkeänderungen vorgenommen werden.
+                        li.treeview
+                           h2 DelayNode (Gelb)
+                           h6 Mit der DelayNode-Schnittstelle kann eine Verzögerung hinzugefügt werden. 
+                        li.treeview
+                           h2 StereoPanningNode (Grün)
+                           h6 Die PannerNode-Schnittstelle entscheidet aus welcher Richtung die Soundausgabe kommt.
+                        li.treeview
+                           h2 WaveshaperNode (Rot)
+                           h6 Mit dem WaveshaperNode-Modul werden Audiosignale mit einer dynamischen Verzerrung hinterlegt.
+                        li.treeview
+                           h2 BiquadFilterNode.Frequenz (Orange)
+                           h6 
+                        li.treeview
+                           h2 BiquadFilterNode Typ:Lowpass (Pink)
+                           h6 Mit der BiquadFilterNode-Schnittstelle(Typ:Lowpass) werden Signale mit Frequenzen unterhalb ihrer Grenzfrequenz ungeschwächt passieren gelassen, während Anteile mit höherer Frequenzen gedämpft werden.
+                        li.treeview
+                           h2 BiquadFilterNode Typ:Highpass (Türkis)
+                           h6 Mit der BiquadFilterNode-Schnittstelle(Typ:Highpass) werden Signale mit Frequenzen oberhalb ihrer Grenzfrequenz ungeschwächt passieren gelassen, während Anteile mit niedrigen Frequenzen gedämpft werden.
+
+                           .clear      

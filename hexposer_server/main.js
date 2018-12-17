@@ -1,4 +1,5 @@
 var express = require('express');
+var addon = require('bindings')('ImageProcessor');
 var app = express();
 var exec = require('child_process').execFile;
 var fs = require('fs');
@@ -23,6 +24,7 @@ app.get('/test', function(req, res, next) {
   		res.json(JSON.parse(fs.readFileSync('pretty0.json')));
 });
 
+console.log(addon.hello());
 app.use(express.static('static'));
 
 //Serves all the request which includes /images in the url from Images folder
