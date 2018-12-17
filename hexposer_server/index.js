@@ -27,11 +27,18 @@ for (var i = 0; i < test.Hexagons.length; i++){
 }
 
 console.log(hexagons);
-console.log(colorConv.colorPrepare(hexagons[0].color));
+//console.log(colorConv.colorPrepare(hexagons[0].color));
 
-hexagons.forEach.color
+/*hexagons.forEach(function(element, index){
+   let blib = colorConv.colorPrepare(element.color);
+   this.element = blib;
+});
+*/
+for(var i = 0; i < hexagons.length; i++){
+hexagons[i].color = colorConv.colorPrepare(hexagons[i].color);
+}
 
-//console.log(hexagons);
+console.log(hexagons);
 
 // next passing hexagons into pug
 

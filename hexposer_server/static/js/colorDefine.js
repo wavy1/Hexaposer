@@ -4,6 +4,7 @@
 
 @return rgbColor: {rChannel:num, gChannel:num, bChannel:num}
 */
+const colorRange = [0, 153, 255];
 
 function convertColor(color) {
     /* Check for # infront of the value, if it's there, strip it. Could be deleted */
@@ -19,7 +20,7 @@ function convertColor(color) {
     rgbColor.gChannel = parseInt(color.substring(2,4),16);
     rgbColor.bChannel = parseInt(color.substring(4),16);
   
-    console.log('convertColor' +rgbColor);
+    // console.log('convertColor done');
     return rgbColor;
 }
 
@@ -41,15 +42,8 @@ function convertColor(color) {
             curr = arr[val];
         }
     }
-    console.log('closest' + curr);
     return curr;
 }
-
-
- var testeroni = convertColor('#1090ff');
- 
- //console.log(testeroni)
- var colorRange = [0, 153, 255];
  
 /*  executes the value cleanUp for each channel in a given rgbColor
 
@@ -64,7 +58,7 @@ function convertColor(color) {
        rgbColor[property] = closest(rgbColor[property],colorRange);
             
     }
-    console.log('colorAdjust' +rgbColor);
+    // console.log('colorAdjust done');
     return rgbColor;
 }
 
@@ -73,7 +67,7 @@ var rgbToHex = function (rgb) {
     if (hex.length < 2) {
          hex = "0" + hex;
     }
-    console.log('rgbToHex' + hex);
+    // console.log('rgbToHex transform');
     return hex;
   }
 
@@ -85,13 +79,9 @@ function colorPrepare(HexColor){
         console.log(proc[property]);  
         newHex = newHex.concat(rgbToHex(proc[property]));
     }
-    console.log('colorPrepare');
+    // console.log('colorPrepare');
     return newHex;
 }  
-
-//console.log(colorAdjust(testeroni));
-
-
 
    var red      = 'ff0000';
    var yellow   = 'ffff00';
