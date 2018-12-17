@@ -1,5 +1,3 @@
-import { objectExpression } from "babel-types";
-
 /* function to transform a Hex_Color value  to a rgb value {0-255,0-255,0-255}
 
 @param color : hexadecimal string (#000000-#ffffff)
@@ -21,6 +19,7 @@ function convertColor(color) {
     rgbColor.gChannel = parseInt(color.substring(2,4),16);
     rgbColor.bChannel = parseInt(color.substring(4),16);
   
+    console.log('convertColor' +rgbColor);
     return rgbColor;
 }
 
@@ -42,24 +41,55 @@ function convertColor(color) {
             curr = arr[val];
         }
     }
+    console.log('closest' + curr);
     return curr;
 }
 
 
  var testeroni = convertColor('#1090ff');
  
- console.log(testeroni)
+ //console.log(testeroni)
  var colorRange = [0, 153, 255];
  
- function colorAdjust (obj){
-    for (var property in obj){
-       obj[property] = closest(obj[property],colorRange);
-       console.log(obj[property]);     
+/*  executes the value cleanUp for each channel in a given rgbColor
+
+    @param rgbColor: {rChannel:num, gChannel:num, bChannel:num}
+    
+    @return rgbColor: {rChannel:num, gChannel:num, bChannel:num}
+
+*/
+
+ function colorAdjust (rgbColor){
+    for (var property in rgbColor){
+       rgbColor[property] = closest(rgbColor[property],colorRange);
+            
     }
-    return obj
- }
- 
-console.log(colorAdjust(testeroni));
+    console.log('colorAdjust' +rgbColor);
+    return rgbColor;
+}
+
+var rgbToHex = function (rgb) { 
+    var hex = Number(rgb).toString(16);
+    if (hex.length < 2) {
+         hex = "0" + hex;
+    }
+    console.log('rgbToHex' + hex);
+    return hex;
+  }
+
+function colorPrepare(HexColor){
+    let proc = convertColor(HexColor);
+    proc = colorAdjust(proc);
+    var newHex = '';
+    for (var property in proc) {
+        console.log(proc[property]);  
+        newHex = newHex.concat(rgbToHex(proc[property]));
+    }
+    console.log('colorPrepare');
+    return newHex;
+}  
+
+//console.log(colorAdjust(testeroni));
 
 
 
@@ -72,3 +102,11 @@ console.log(colorAdjust(testeroni));
    var purple   = '990099';
    var grey     = '999999';
    var cyan     = '00ffff';
+
+   module.exports.colorAdjust = colorAdjust;
+   module.exports.closest = closest;
+   module.exports.colorPrepare = colorPrepare;
+   module.exports.convertColor = convertColor;
+   module.exports.colorRange = colorRange;
+   module.exports.rgbToHex = rgbToHex;
+

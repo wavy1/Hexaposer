@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var fs = require('fs');
+var colorConv = require('./static/js/colorDefine.js');
 
 app.engine('pug', require('pug').__express)
 app.set('view engine', 'pug');
@@ -24,6 +25,14 @@ var hexagons = [];
 for (var i = 0; i < test.Hexagons.length; i++){
   hexagons[i] = test.Hexagons[i];
 }
+
+console.log(hexagons);
+console.log(colorConv.colorPrepare(hexagons[0].color));
+
+hexagons.forEach.color
+
+//console.log(hexagons);
+
 // next passing hexagons into pug
 
 app.get('/dynamic_view', function(req, res){
