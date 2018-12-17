@@ -76,7 +76,7 @@ function colorPrepare(HexColor){
     proc = colorAdjust(proc);
     var newHex = '';
     for (var property in proc) {
-        console.log(proc[property]);  
+        //console.log(proc[property]);  
         newHex = newHex.concat(rgbToHex(proc[property]));
     }
     // console.log('colorPrepare');

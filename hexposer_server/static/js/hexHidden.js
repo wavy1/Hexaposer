@@ -20,7 +20,7 @@ if (($(HexOrange).css('visibility') =='hidden')) {
 
     biquadFilter.frquency.value.disabled;
 }
-if (($(HexPink).css('visibility') =='hidden')) {
+if (($(HexPurple).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(delay);
     delay.connect(stereoPanner);
@@ -44,7 +44,7 @@ if (($(HexGreen).css('visibility') =='hidden')) {
     distortion.connect(biquadFilter);
     biquadFilter.connect(context.destination);
 }
-if (($(HexYellow).css('visibility') =='hidden')) {
+if (($(HexGrey).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(stereoPanner);
     stereoPanner.connect(distortion);
@@ -61,7 +61,7 @@ if (($(HexBlue).css('visibility') =='hidden')) {
 
 //Bei 5 ausgewählten Hexagone, werden zwei Hexagone auf Hidden gestellt. Rest wird angezeigt.
 
-if (($(HexPink).css('visibility') =='hidden')($(HexTurquoise).css('visibility') =='hidden')) {
+if (($(HexPurple).css('visibility') =='hidden')($(HexTurquoise).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(delay);
     delay.connect(stereoPanner);
@@ -82,7 +82,7 @@ if (($(HexOrange).css('visibility') =='hidden')($(HexTurquoise).css('visibility'
     biquadFilter.type !== "highpass";
     biquadFilter.frquency.value.disabled;
 }
-if (($(HexOrange).css('visibility') =='hidden')($(HexPink).css('visibility') =='hidden')) {
+if (($(HexOrange).css('visibility') =='hidden')($(HexPurple).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(delay);
     delay.connect(stereoPanner);
@@ -102,7 +102,7 @@ if (($(HexRed).css('visibility') =='hidden')($(HexTurquoise).css('visibility') =
 
     biquadFilter.type !== "highpass";
 }
-if (($(HexRed).css('visibility') =='hidden')($(HexPink).css('visibility') =='hidden')) {
+if (($(HexRed).css('visibility') =='hidden')($(HexPurple).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(delay);
     delay.connect(stereoPanner);
@@ -129,7 +129,7 @@ if (($(HexGreen).css('visibility') =='hidden')($(HexTurquoise).css('visibility')
 
     biquadFilter.type !== "highpass";   
 }
-if (($(HexGreen).css('visibility') =='hidden')($(HexPink).css('visibility') =='hidden')) {
+if (($(HexGreen).css('visibility') =='hidden')($(HexPurple).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(delay);
     delay.connect(distortion);
@@ -153,7 +153,7 @@ if (($(HexGreen).css('visibility') =='hidden')($(HexRed).css('visibility') =='hi
     delay.connect(biquadFilter);
     biquadFilter.connect(context.destination);  
 }
-if (($(HexYellow).css('visibility') =='hidden')($(HexTurquoise).css('visibility') =='hidden')) {
+if (($(HexGrey).css('visibility') =='hidden')($(HexTurquoise).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(stereoPanner);
     stereoPanner.connect(distortion);
@@ -162,7 +162,7 @@ if (($(HexYellow).css('visibility') =='hidden')($(HexTurquoise).css('visibility'
 
     biquadFilter.type !== "highpass";   
 }
-if (($(HexYellow).css('visibility') =='hidden')($(HexPink).css('visibility') =='hidden')) {
+if (($(HexGrey).css('visibility') =='hidden')($(HexPurple).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(stereoPanner);
     stereoPanner.connect(distortion);
@@ -171,7 +171,7 @@ if (($(HexYellow).css('visibility') =='hidden')($(HexPink).css('visibility') =='
 
     biquadFilter.type !== "lowpass";   
 }
-if (($(HexYellow).css('visibility') =='hidden')($(HexOrange).css('visibility') =='hidden')) {
+if (($(HexGrey).css('visibility') =='hidden')($(HexOrange).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(stereoPanner);
     stereoPanner.connect(distortion);
@@ -180,13 +180,13 @@ if (($(HexYellow).css('visibility') =='hidden')($(HexOrange).css('visibility') =
 
     biquadFilter.frquency.value.disabled;  
 }
-if (($(HexYellow).css('visibility') =='hidden')($(HexRed).css('visibility') =='hidden')) {
+if (($(HexGrey).css('visibility') =='hidden')($(HexRed).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(stereoPanner);
     stereoPanner.connect(biquadFilter);
     biquadFilter.connect(context.destination); 
 }
-if (($(HexYellow).css('visibility') =='hidden')($(HexGreen).css('visibility') =='hidden')) {
+if (($(HexGrey).css('visibility') =='hidden')($(HexGreen).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(distortion);
     distortion.connect(biquadFilter);
@@ -201,7 +201,7 @@ if (($(HexBlue).css('visibility') =='hidden')($(HexTurquoise).css('visibility') 
 
     biquadFilter.type !== "highpass";
 }
-if (($(HexBlue).css('visibility') =='hidden')($(HexPink).css('visibility') =='hidden')) {
+if (($(HexBlue).css('visibility') =='hidden')($(HexPurple).css('visibility') =='hidden')) {
     source.connect(delay);
     delay.connect(stereoPanner);
     stereoPanner.connect(distortion);
@@ -231,7 +231,7 @@ if (($(HexBlue).css('visibility') =='hidden')($(HexGreen).css('visibility') =='h
     distortion.connect(biquadFilter);
     biquadFilter.connect(context.destination);
 }
-if (($(HexBlue).css('visibility') =='hidden')($(HexYellow).css('visibility') =='hidden')) {
+if (($(HexBlue).css('visibility') =='hidden')($(HexGrey).css('visibility') =='hidden')) {
     source.connect(distortion);
     distortion.connect(stereoPanner);
     stereoPanner.connect(biquadFilter);
@@ -240,14 +240,14 @@ if (($(HexBlue).css('visibility') =='hidden')($(HexYellow).css('visibility') =='
 
 //Bei 4 ausgewählten Hexagone, werden drei Hexagone auf Hidden gestellt. Rest wird angezeigt.
 
-if (($(HexOrange).css('visibility') =='hidden')($(HexPink).css('visibility') =='hidden')($(HexTurquoise).css('visibility') =='hidden')) {
+if (($(HexOrange).css('visibility') =='hidden')($(HexPurple).css('visibility') =='hidden')($(HexTurquoise).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(delay);
     delay.connect(stereoPanner);
     stereoPanner.connect(distortion);
     distortion.connect(context.destination);
 }
-if (($(HexRed).css('visibility') =='hidden')($(HexPink).css('visibility') =='hidden')($(HexTurquoise).css('visibility') =='hidden')) {
+if (($(HexRed).css('visibility') =='hidden')($(HexPurple).css('visibility') =='hidden')($(HexTurquoise).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(delay);
     delay.connect(stereoPanner);
@@ -267,7 +267,7 @@ if (($(HexRed).css('visibility') =='hidden')($(HexOrange).css('visibility') =='h
     biquadFilter.type !== "highpass";
     biquadFilter.frquency.value.disabled;
 }
-if (($(HexGreen).css('visibility') =='hidden')($(HexPink).css('visibility') =='hidden')($(HexTurquoise).css('visibility') =='hidden')) {
+if (($(HexGreen).css('visibility') =='hidden')($(HexPurple).css('visibility') =='hidden')($(HexTurquoise).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(delay);
     delay.connect(distortion);
@@ -277,7 +277,7 @@ if (($(HexGreen).css('visibility') =='hidden')($(HexPink).css('visibility') =='h
     biquadFilter.type !== "lowpass";
     biquadFilter.type !== "highpass";
 }
-if (($(HexRed).css('visibility') =='hidden')($(HexOrange).css('visibility') =='hidden')($(HexPink).css('visibility') =='hidden')) {
+if (($(HexRed).css('visibility') =='hidden')($(HexOrange).css('visibility') =='hidden')($(HexPurple).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(delay);
     delay.connect(stereoPanner);
@@ -297,7 +297,7 @@ if (($(HexGreen).css('visibility') =='hidden')($(HexOrange).css('visibility') ==
     biquadFilter.type !== "highpass";
     biquadFilter.frquency.value.disabled;
 }
-if (($(HexGreen).css('visibility') =='hidden')($(HexOrange).css('visibility') =='hidden')($(HexPink).css('visibility') =='hidden')) {
+if (($(HexGreen).css('visibility') =='hidden')($(HexOrange).css('visibility') =='hidden')($(HexPurple).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(delay);
     delay.connect(distortion);
@@ -315,7 +315,7 @@ if (($(HexGreen).css('visibility') =='hidden')($(HexRed).css('visibility') =='hi
 
     biquadFilter.type !== "highpass";
 }
-if (($(HexGreen).css('visibility') =='hidden')($(HexRed).css('visibility') =='hidden')($(HexPink).css('visibility') =='hidden')) {
+if (($(HexGreen).css('visibility') =='hidden')($(HexRed).css('visibility') =='hidden')($(HexPurple).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(delay);
     delay.connect(biquadFilter);
@@ -331,7 +331,7 @@ if (($(HexGreen).css('visibility') =='hidden')($(HexRed).css('visibility') =='hi
 
     biquadFilter.frquency.value.disabled;
 }
-if (($(HexYellow).css('visibility') =='hidden')($(HexPink).css('visibility') =='hidden')($(HexTurquoise).css('visibility') =='hidden')) {
+if (($(HexGrey).css('visibility') =='hidden')($(HexPurple).css('visibility') =='hidden')($(HexTurquoise).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(stereoPanner);
     stereoPanner.connect(distortion);
@@ -341,7 +341,7 @@ if (($(HexYellow).css('visibility') =='hidden')($(HexPink).css('visibility') =='
     biquadFilter.type !== "lowpass";
     biquadFilter.type !== "highpass";
 }
-if (($(HexYellow).css('visibility') =='hidden')($(HexOrange).css('visibility') =='hidden')($(HexTurquoise).css('visibility') =='hidden')) {
+if (($(HexGrey).css('visibility') =='hidden')($(HexOrange).css('visibility') =='hidden')($(HexTurquoise).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(stereoPanner);
     stereoPanner.connect(distortion);
@@ -351,7 +351,7 @@ if (($(HexYellow).css('visibility') =='hidden')($(HexOrange).css('visibility') =
     biquadFilter.type !== "highpass";
     biquadFilter.frquency.value.disabled;
 }
-if (($(HexYellow).css('visibility') =='hidden')($(HexOrange).css('visibility') =='hidden')($(HexPink).css('visibility') =='hidden')) {
+if (($(HexGrey).css('visibility') =='hidden')($(HexOrange).css('visibility') =='hidden')($(HexPurple).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(stereoPanner);
     stereoPanner.connect(distortion);
@@ -361,7 +361,7 @@ if (($(HexYellow).css('visibility') =='hidden')($(HexOrange).css('visibility') =
     biquadFilter.type !== "lowpass";
     biquadFilter.frquency.value.disabled;
 }
-if (($(HexYellow).css('visibility') =='hidden')($(HexRed).css('visibility') =='hidden')($(HexTurquoise).css('visibility') =='hidden')) {
+if (($(HexGrey).css('visibility') =='hidden')($(HexRed).css('visibility') =='hidden')($(HexTurquoise).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(stereoPanner);
     stereoPanner.connect(biquadFilter);
@@ -369,7 +369,7 @@ if (($(HexYellow).css('visibility') =='hidden')($(HexRed).css('visibility') =='h
 
     biquadFilter.type !== "highpass";
 }
-if (($(HexYellow).css('visibility') =='hidden')($(HexRed).css('visibility') =='hidden')($(HexPink).css('visibility') =='hidden')) {
+if (($(HexGrey).css('visibility') =='hidden')($(HexRed).css('visibility') =='hidden')($(HexPurple).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(stereoPanner);
     stereoPanner.connect(biquadFilter);
@@ -377,7 +377,7 @@ if (($(HexYellow).css('visibility') =='hidden')($(HexRed).css('visibility') =='h
 
     biquadFilter.type !== "lowpass";
 }
-if (($(HexYellow).css('visibility') =='hidden')($(HexRed).css('visibility') =='hidden')($(HexOrange).css('visibility') =='hidden')) {
+if (($(HexGrey).css('visibility') =='hidden')($(HexRed).css('visibility') =='hidden')($(HexOrange).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(stereoPanner);
     stereoPanner.connect(biquadFilter);
@@ -385,7 +385,7 @@ if (($(HexYellow).css('visibility') =='hidden')($(HexRed).css('visibility') =='h
 
     biquadFilter.frquency.value.disabled;
 }
-if (($(HexYellow).css('visibility') =='hidden')($(HexGreen).css('visibility') =='hidden')($(HexTurquoise).css('visibility') =='hidden')) {
+if (($(HexGrey).css('visibility') =='hidden')($(HexGreen).css('visibility') =='hidden')($(HexTurquoise).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(distortion);
     distortion.connect(biquadFilter);
@@ -393,7 +393,7 @@ if (($(HexYellow).css('visibility') =='hidden')($(HexGreen).css('visibility') ==
 
     biquadFilter.type !== "highpass";
 }
-if (($(HexYellow).css('visibility') =='hidden')($(HexGreen).css('visibility') =='hidden')($(HexPink).css('visibility') =='hidden')) {
+if (($(HexGrey).css('visibility') =='hidden')($(HexGreen).css('visibility') =='hidden')($(HexPurple).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(distortion);
     distortion.connect(biquadFilter);
@@ -401,7 +401,7 @@ if (($(HexYellow).css('visibility') =='hidden')($(HexGreen).css('visibility') ==
 
     biquadFilter.type !== "lowpass";
 }
-if (($(HexYellow).css('visibility') =='hidden')($(HexGreen).css('visibility') =='hidden')($(HexOrange).css('visibility') =='hidden')) {
+if (($(HexGrey).css('visibility') =='hidden')($(HexGreen).css('visibility') =='hidden')($(HexOrange).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(distortion);
     distortion.connect(biquadFilter);
@@ -409,12 +409,12 @@ if (($(HexYellow).css('visibility') =='hidden')($(HexGreen).css('visibility') ==
 
     biquadFilter.frquency.value.disabled;
 }
-if (($(HexYellow).css('visibility') =='hidden')($(HexGreen).css('visibility') =='hidden')($(HexRed).css('visibility') =='hidden')) {
+if (($(HexGrey).css('visibility') =='hidden')($(HexGreen).css('visibility') =='hidden')($(HexRed).css('visibility') =='hidden')) {
     source.connect(gain);
     gain.connect(biquadFilter);
     biquadFilter.connect(context.destination);
 }
-if (($(HexBlue).css('visibility') =='hidden')($(HexPink).css('visibility') =='hidden')($(HexTurquoise).css('visibility') =='hidden')) {
+if (($(HexBlue).css('visibility') =='hidden')($(HexPurple).css('visibility') =='hidden')($(HexTurquoise).css('visibility') =='hidden')) {
     source.connect(delay);
     delay.connect(stereoPanner);
     stereoPanner.connect(distortion);
@@ -434,7 +434,7 @@ if (($(HexBlue).css('visibility') =='hidden')($(HexOrange).css('visibility') =='
     biquadFilter.type !== "highpass";
     biquadFilter.frquency.value.disabled;
 }
-if (($(HexBlue).css('visibility') =='hidden')($(HexOrange).css('visibility') =='hidden')($(HexPink).css('visibility') =='hidden')) {
+if (($(HexBlue).css('visibility') =='hidden')($(HexOrange).css('visibility') =='hidden')($(HexPurple).css('visibility') =='hidden')) {
     source.connect(delay);
     delay.connect(stereoPanner);
     stereoPanner.connect(distortion);
@@ -452,7 +452,7 @@ if (($(HexBlue).css('visibility') =='hidden')($(HexRed).css('visibility') =='hid
 
     biquadFilter.type !== "highpass";
 }
-if (($(HexBlue).css('visibility') =='hidden')($(HexRed).css('visibility') =='hidden')($(HexPink).css('visibility') =='hidden')) {
+if (($(HexBlue).css('visibility') =='hidden')($(HexRed).css('visibility') =='hidden')($(HexPurple).css('visibility') =='hidden')) {
     source.connect(delay);
     delay.connect(stereoPanner);
     stereoPanner.connect(biquadFilter);
@@ -476,7 +476,7 @@ if (($(HexBlue).css('visibility') =='hidden')($(HexGreen).css('visibility') =='h
 
     biquadFilter.type !== "highpass";
 }
-if (($(HexBlue).css('visibility') =='hidden')($(HexGreen).css('visibility') =='hidden')($(HexPink).css('visibility') =='hidden')) {
+if (($(HexBlue).css('visibility') =='hidden')($(HexGreen).css('visibility') =='hidden')($(HexPurple).css('visibility') =='hidden')) {
     source.connect(delay);
     delay.connect(distortion);
     distortion.connect(biquadFilter);
@@ -492,12 +492,12 @@ if (($(HexBlue).css('visibility') =='hidden')($(HexGreen).css('visibility') =='h
 
     biquadFilter.frquency.value.disabled;
 }
-if (($(HexYellow).css('visibility') =='hidden')($(HexGreen).css('visibility') =='hidden')($(HexRed).css('visibility') =='hidden')) {
+if (($(HexGrey).css('visibility') =='hidden')($(HexGreen).css('visibility') =='hidden')($(HexRed).css('visibility') =='hidden')) {
     source.connect(delay);
     delay.connect(biquadFilter);
     biquadFilter.connect(context.destination);
 }
-if (($(HexBlue).css('visibility') =='hidden')($(HexYellow).css('visibility') =='hidden')($(HexTurquoise).css('visibility') =='hidden')) {
+if (($(HexBlue).css('visibility') =='hidden')($(HexGrey).css('visibility') =='hidden')($(HexTurquoise).css('visibility') =='hidden')) {
     source.connect(distortion);
     distortion.connect(stereoPanner);
     stereoPanner.connect(biquadFilter);
@@ -505,7 +505,7 @@ if (($(HexBlue).css('visibility') =='hidden')($(HexYellow).css('visibility') =='
 
     biquadFilter.type !== "highpass";
 }
-if (($(HexBlue).css('visibility') =='hidden')($(HexYellow).css('visibility') =='hidden')($(HexPink).css('visibility') =='hidden')) {
+if (($(HexBlue).css('visibility') =='hidden')($(HexGrey).css('visibility') =='hidden')($(HexPurple).css('visibility') =='hidden')) {
     source.connect(distortion);
     distortion.connect(stereoPanner);
     stereoPanner.connect(biquadFilter);
@@ -513,7 +513,7 @@ if (($(HexBlue).css('visibility') =='hidden')($(HexYellow).css('visibility') =='
 
     biquadFilter.type !== "lowpass";
 }
-if (($(HexBlue).css('visibility') =='hidden')($(HexYellow).css('visibility') =='hidden')($(HexOrange).css('visibility') =='hidden')) {
+if (($(HexBlue).css('visibility') =='hidden')($(HexGrey).css('visibility') =='hidden')($(HexOrange).css('visibility') =='hidden')) {
     source.connect(distortion);
     distortion.connect(stereoPanner);
     stereoPanner.connect(biquadFilter);
@@ -521,12 +521,12 @@ if (($(HexBlue).css('visibility') =='hidden')($(HexYellow).css('visibility') =='
 
     biquadFilter.frquency.value.disabled;
 }
-if (($(HexBlue).css('visibility') =='hidden')($(HexYellow).css('visibility') =='hidden')($(HexRed).css('visibility') =='hidden')) {
+if (($(HexBlue).css('visibility') =='hidden')($(HexGrey).css('visibility') =='hidden')($(HexRed).css('visibility') =='hidden')) {
     source.connect(stereoPanner);
     stereoPanner.connect(biquadFilter);
     biquadFilter.connect(context.destination);
 }
-if (($(HexBlue).css('visibility') =='hidden')($(HexYellow).css('visibility') =='hidden')($(HexGreen).css('visibility') =='hidden')) {
+if (($(HexBlue).css('visibility') =='hidden')($(HexGrey).css('visibility') =='hidden')($(HexGreen).css('visibility') =='hidden')) {
     source.connect(distortion);
     distortion.connect(biquadFilter);
     biquadFilter.connect(context.destination);
