@@ -46,7 +46,7 @@
     position: absolute;
     transform:  translate(100%, 0%);
     background: #fff;
-    visibility: visible;
+    visibility: hidden;
 }
 
 .hexagonYELLOW:before,
@@ -210,7 +210,7 @@
     position: absolute;
     transform:  translate(150%, 150%);
     background: #fff;
-    visibility: hidden;
+    visibility: visible;
 }
 
 .hexagonPURPLE:before,
@@ -251,7 +251,7 @@
     position: absolute;
     transform:  translate(250%, 150%);
     background: #fff;
-    visibility: hidden;
+    visibility: visible;
 }
 
 .hexagonGREY:before,
@@ -292,7 +292,7 @@
     position: absolute;
     transform:  translate(100%, 300%);
     background: #fff;
-    visibility: visible;
+    visibility: hidden;
 }
 
 .hexagonPINK:before,

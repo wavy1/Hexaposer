@@ -23,14 +23,14 @@ biquadFilter.connect(context.destination);
 //compressor.connect(context.destination);
 
 var HexBlue = document.getElementById("hexBlue");
-var HexYellow = document.getElementById("hexYellow");
+var HexYellow = document.getElementById("hexGrey");
 var HexGreen = document.getElementById("hexGreen");
 var HexRed = document.getElementById("hexRed");
 var HexOrange = document.getElementById("hexOrange");
-var HexPink = document.getElementById("hexPink");
+var HexPurple = document.getElementById("hexPurple");
 var HexTurquoise = document.getElementById("hexTurquoise");
-//var HexPurple = document.getElementById("hexPurple");
-//var HexGrey = document.getElementById("hexGrey");
+var HexPurple = document.getElementById("hexPurple");
+var HexGrey = document.getElementById("hexGrey");
 
 //GAIN
 
@@ -43,10 +43,10 @@ if($(HexBlue).css('visibility') =='visible') {
 
 //DELAY
 
-if($(HexYellow).css('visibility') =='visible') {
+if($(HexGrey).css('visibility') =='visible') {
     var delayValue = 0; //0Sek nach Klick auf dem PlayStopButton wird Sound abgespielt oder pausiert
     delay.delayTime.value = delayValue;
-} else if ($(HexYellow).css('visibility') =='hidden') {
+} else if ($(HexGrey).css('visibility') =='hidden') {
     //delay.delayTime.value = delayValue.disabled;
 }
 
@@ -94,13 +94,13 @@ if($(HexOrange).css('visibility') =='visible') {
 
 //BIQUADFILTER.TYPE = "LOWPASS" AND "HIGHPASS" AND "LOWSHELF"
 
-if($(HexPink).css('visibility') =='visible') {
+if($(HexPurple).css('visibility') =='visible') {
     biquadFilter.type = "lowpass";
 } else if ($(HexTurquoise).css('visibility') =='visible') {
     biquadFilter.type = "highpass";
-} else if (($(HexPink).css('visibility') =='visible')($(HexTurquoise).css('visibility') =='visible')) {
+} else if (($(HexPurple).css('visibility') =='visible')($(HexTurquoise).css('visibility') =='visible')) {
     biquadFilter.type = "lowshelf";    
-} else if (($(HexPink).css('visibility') =='hidden')($(HexTurquoise).css('visibility') =='hidden')) {
+} else if (($(HexPurple).css('visibility') =='hidden')($(HexTurquoise).css('visibility') =='hidden')) {
     biquadFilter.type !== "lowpass" && biquadFilter.type !== "highpass";
 }
 
