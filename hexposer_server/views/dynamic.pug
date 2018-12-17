@@ -30,22 +30,26 @@ html(lang='zxx')
 
       .row 
          // Hexagone
-         .main-middle
-            figure.hexagonBLUE#hexBlue(min="0" max="100" value="10")
-            figure.hexagonYELLOW#hexYellow(min="0" max="100" value="0")
-            figure.hexagonGREEN#hexGreen(min="0" max="100" value="50")
-            figure.hexagonRED#hexRed(min="0" max="100" value="0")
-            figure.hexagonORANGE#hexOrange(min="0" max="20000" value="1000")
-            figure.hexagonPURPLE#hexPurple(min="0" max="100" value="75")
-            figure.hexagonGREY#hexGrey(min="0" max="1000" value="3") 
-            figure.hexagonPINK#hexPink
-            figure.hexagonTURQUOISE#hexTurquoise
+            .main-middle
+               figure.hexagonBLUE#hexBlue(min="0" max="100" value="10")
+               figure.hexagonYELLOW#hexYellow(min="0" max="100" value="0")
+               figure.hexagonGREEN#hexGreen(min="0" max="100" value="50")
+               figure.hexagonRED#hexRed(min="0" max="100" value="0")
+               figure.hexagonORANGE#hexOrange(min="0" max="20000" value="1000")
+               figure.hexagonPURPLE#hexPurple(min="0" max="100" value="75")
+               figure.hexagonGREY#hexGrey(min="0" max="1000" value="3") 
+               figure.hexagonPINK#hexPink
+               figure.hexagonTURQUOISE#hexTurquoise
 
-         // .row
+         .row
              .main-middle
+                  
+
                   - for (var x = 0; x< hexArr.length; x++)
-                  -var color = 'hexagon' +hexArr[x].color.toUpperCase();
-                     figure(class=color)
+                     - console.log(hexArr[x].color);
+                     - var cls = 'hexagon' + hexArr[x].color;
+                     - var ident = 'hex' + hexArr[x].color;
+                        figure(id=ident class=cls)
 
          .main-left
             // Slider: Nur zum Testen. Wird wieder gelöscht!

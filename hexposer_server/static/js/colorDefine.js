@@ -76,13 +76,14 @@ function colorPrepare(HexColor){
     proc = colorAdjust(proc);
     var newHex = '';
     for (var property in proc) {
-        console.log(proc[property]);  
+        //console.log(proc[property]);  
         newHex = newHex.concat(rgbToHex(proc[property]));
     }
     // console.log('colorPrepare');
     return newHex;
 }  
 
+/*  our color list for reference
    var red      = 'ff0000';
    var yellow   = 'ffff00';
    var pink     = 'ff99ff';
@@ -92,11 +93,15 @@ function colorPrepare(HexColor){
    var purple   = '990099';
    var grey     = '999999';
    var cyan     = '00ffff';
-
-   module.exports.colorAdjust = colorAdjust;
-   module.exports.closest = closest;
+*/
+  
    module.exports.colorPrepare = colorPrepare;
-   module.exports.convertColor = convertColor;
-   module.exports.colorRange = colorRange;
-   module.exports.rgbToHex = rgbToHex;
+  
+   // only colorPrepare needs export
+
+    // module.exports.colorAdjust = colorAdjust;
+    // module.exports.closest = closest;
+    // module.exports.convertColor = convertColor;
+    // module.exports.colorRange = colorRange;
+    // module.exports.rgbToHex = rgbToHex;
 

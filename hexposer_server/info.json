@@ -1,19 +1,19 @@
 {
   "Hexagons": [
     {
-      "color": "fe08cc",
-      "posX": 128,
-      "posY": 64
+      "color": "ff0010",
+      "posZ": 0,
+      "posY": 1
     },
     {
       "color": "de550f",
-      "posX": 192,
-      "posY": 64
+      "posZ": 1,
+      "posY": 1
     },
     {
       "color": "00ff33",
-      "posX": 192,
-      "posY": 32
+      "posZ": 1,
+      "posY": 2
     }
   ]
 }
