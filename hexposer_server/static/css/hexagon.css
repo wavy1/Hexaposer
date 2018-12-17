@@ -6,7 +6,7 @@
     position: absolute;
     transform:  translate(0%, 0%);
     background: #fff;
-    display: visible;
+    visibility: visible;
 }
 
 .hexagonBLUE:before,
@@ -46,7 +46,7 @@
     position: absolute;
     transform:  translate(100%, 0%);
     background: #fff;
-    display: visible;
+    visibility: visible;
 }
 
 .hexagonYELLOW:before,
@@ -87,7 +87,7 @@
     position: absolute;
     transform:  translate(200%, 0%);
     background: #fff;
-    display: visible;
+    visibility: visible;
 }
 
 .hexagonGREEN:before,
@@ -128,7 +128,7 @@
     position: absolute;
     transform:  translate(50%, 150%);
     background: #fff;
-    display: visible;
+    visibility: visible;
 }
 
 .hexagonRED:before,
@@ -169,7 +169,7 @@
     position: absolute;
     transform:  translate(300%, 0%);
     background: #fff;
-    display: visible;
+    visibility: visible;
 }
 
 .hexagonORANGE:before,
@@ -210,7 +210,7 @@
     position: absolute;
     transform:  translate(150%, 150%);
     background: #fff;
-    display: visible;
+    visibility: hidden;
 }
 
 .hexagonPURPLE:before,
@@ -251,7 +251,7 @@
     position: absolute;
     transform:  translate(250%, 150%);
     background: #fff;
-    display: visible;
+    visibility: hidden;
 }
 
 .hexagonGREY:before,
@@ -333,7 +333,7 @@
     position: absolute;
     transform:  translate(200%, 300%);
     background: #fff;
-    display: visible;
+    visibility: visible;
 }
 
 .hexagonTURQUOISE:before,
