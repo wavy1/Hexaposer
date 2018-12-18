@@ -3,17 +3,77 @@
     {
       "color": "ff0010",
       "posZ": 0,
-      "posY": 1
+      "posY": 0
     },
     {
       "color": "de550f",
-      "posZ": 1,
+      "posZ": 0,
+      "posY": 2
+    },
+    {
+      "color": "00ff33",
+      "posZ": 0,
       "posY": 1
     },
     {
       "color": "00ff33",
       "posZ": 1,
+      "posY": 1
+    },
+    {
+      "color": "0000ff",
+      "posZ": 1,
       "posY": 2
+    },
+    {
+      "color": "999999",
+      "posZ": 2,
+      "posY": 0
+    },
+    {
+      "color": "00ff00",
+      "posZ": 2,
+      "posY": 1
+    },
+    {
+      "color": "00ffff",
+      "posZ": 3,
+      "posY": 0
+    },
+    {
+      "color": "de550f",
+      "posZ": 3,
+      "posY": 1
+    },
+    {
+      "color": "00ff33",
+      "posZ": 4,
+      "posY": 0
+    },
+    {
+      "color": "00ff33",
+      "posZ": 5,
+      "posY": 1
+    },
+    {
+      "color": "00ff33",
+      "posZ": 6,
+      "posY": 0
+    },
+    {
+      "color": "00ff33",
+      "posZ": 6,
+      "posY": 1
+    },
+    {
+      "color": "00ff33",
+      "posZ": 7,
+      "posY": 0
+    },
+    {
+      "color": "00ff33",
+      "posZ": 8,
+      "posY": 0
     }
   ]
 }

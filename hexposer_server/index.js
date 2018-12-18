@@ -33,25 +33,25 @@ for (var i = 0; i < test.Hexagons.length; i++){
 for(var i = 0; i < hexagons.length; i++){
 hexagons[i].color = colorConv.colorPrepare(hexagons[i].color);
 if (hexagons[i].color == 'ff0000'){
-   hexagons[i].color = 'RED';
+   hexagons[i].color = 'Red';
    }
 else if(hexagons[i].color == 'ff9900'){
-   hexagons[i].color = 'ORANGE';
+   hexagons[i].color = 'Orange';
    }
 else if(hexagons[i].color == '00ff00'){
-   hexagons[i].color = 'GREEN';
+   hexagons[i].color = 'Green';
    }
 else if(hexagons[i].color == '0000ff'){
-      hexagons[i].color = 'BLUE';
+      hexagons[i].color = 'Blue';
    }
 else if(hexagons[i].color == '990099'){
-      hexagons[i].color = 'PURPLE';
+      hexagons[i].color = 'Purple';
    }
 else if(hexagons[i].color == '999999'){
-      hexagons[i].color = 'GREY';
+      hexagons[i].color = 'Grey';
    }
 else if(hexagons[i].color == '00ffff'){
-      hexagons[i].color = 'TURQUOISE';
+      hexagons[i].color = 'Turquoise';
    }
 }
  
