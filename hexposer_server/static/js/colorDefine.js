@@ -4,7 +4,8 @@
 
 @return rgbColor: {rChannel:num, gChannel:num, bChannel:num}
 */
-const colorRange = [0, 153, 255];
+const colorRange = [30, 90, 160];
+const colorSet = [0, 153, 255]
 
 function convertColor(color) {
     /* Check for # infront of the value, if it's there, strip it. Could be deleted */
@@ -33,16 +34,23 @@ function convertColor(color) {
     */
 
    function closest (num, arr) {
-    var curr = arr[0];
-    var diff = Math.abs (num - curr);
+    var curr 
+    var diffs = []
+    var diff
+    console.log("Number: " + num)
     for (var val = 0; val < arr.length; val++) {
-        var newdiff = Math.abs (num - arr[val]);
-        if (newdiff < diff) {
-            diff = newdiff;
-            curr = arr[val];
-        }
+        diff = Math.abs (num - colorRange[val])
+        diffs.push(diff)
     }
-    return curr;
+    var minimun = Math.min(...diffs)
+    console.log("Mini: " + minimun)
+    var index = diffs.indexOf(minimun)
+    console.log("Index: " + index)  
+
+    curr = colorSet[index]
+    console.log("Set: " + curr + "\n")
+
+    return curr
 }
  
 /*  executes the value cleanUp for each channel in a given rgbColor
@@ -55,10 +63,9 @@ function convertColor(color) {
 
  function colorAdjust (rgbColor){
     for (var property in rgbColor){
-       rgbColor[property] = closest(rgbColor[property],colorRange);
-            
+       rgbColor[property] = closest(rgbColor[property],colorRange); 
     }
-    // console.log('colorAdjust done');
+    console.log('-----------');
     return rgbColor;
 }
 

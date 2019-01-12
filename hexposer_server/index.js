@@ -8,7 +8,6 @@ app.engine('pug', require('pug').__express)
 app.set('view engine', 'pug');
 
 
-
 app.use(express.static('static'));
 
 //Serves all the request which includes /images in the url from Images folder

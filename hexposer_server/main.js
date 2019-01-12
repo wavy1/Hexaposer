@@ -7,8 +7,12 @@ var fs = require('fs');
 
 console.log("Start ImageProcessor");
 exec('../hexposer_image_processor/cmake-build-debug/hexaposer.exe', function(err, data) {
+
 		console.log(err);
 		console.log(data.toString());
+		exec('../hexposer_image_processor/cmake-build-debug/hexaposer.exe', function(err, data){
+			
+		}		
 })
 
 app.get('/dynamic_view', function(req, res){
@@ -24,7 +28,6 @@ app.get('/test', function(req, res, next) {
   		res.json(JSON.parse(fs.readFileSync('pretty0.json')));
 });
 
-console.log(addon.hello());
 app.use(express.static('static'));
 
 //Serves all the request which includes /images in the url from Images folder
