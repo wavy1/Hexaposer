@@ -7,11 +7,7 @@ var colorConv = require('./static/js/colorDefine.js');
 app.engine('pug', require('pug').__express)
 app.set('view engine', 'pug');
 
-console.log("Start ImageProcessor");
-exec('../hexposer_image_processor/cmake-build-debug/hexaposer.exe', function(err, data) {
-   console.log(err);
-   console.log(data.toString());
-})
+
 
 app.use(express.static('static'));
 
