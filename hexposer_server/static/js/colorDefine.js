@@ -1,3 +1,5 @@
+var fs = require('fs');
+
 /* function to transform a Hex_Color value  to a rgb value {0-255,0-255,0-255}
 
 @param color : hexadecimal string (#000000-#ffffff)
@@ -90,6 +92,49 @@ function colorPrepare(HexColor){
     return newHex;
 }  
 
+var getHexagons = function() {
+    // open json and read to buffer
+    let myjson = fs.readFileSync('info.json');
+        // parsing the json data
+        var test = JSON.parse(myjson);
+  // creating the hexgons array
+  var hexagons = [];
+  // iterating the content from parsed json to the array
+  for (var i = 0; i < test.Hexagons.length; i++){
+   hexagons[i] = test.Hexagons[i];
+  }
+  
+  // console.log(hexagons);
+  
+  
+  /*Color correction for the .json data */
+  for(var i = 0; i < hexagons.length; i++){
+     hexagons[i].color = colorPrepare(hexagons[i].color);
+     if (hexagons[i].color == 'ff0000'){
+        hexagons[i].color = 'Red';
+     }
+     else if(hexagons[i].color == 'ff9900'){
+        hexagons[i].color = 'Orange';
+     }
+     else if(hexagons[i].color == '00ff00'){
+        hexagons[i].color = 'Green';
+     }
+     else if(hexagons[i].color == '0000ff'){
+        hexagons[i].color = 'Blue';
+     }
+     else if(hexagons[i].color == '990099'){
+        hexagons[i].color = 'Purple';
+     }
+     else if(hexagons[i].color == '999999'){
+        hexagons[i].color = 'Grey';
+     }
+     else if(hexagons[i].color == '00ffff'){
+        hexagons[i].color = 'Turquoise';
+     }
+  }
+  return hexagons;
+}
+
 /*  our color list for reference
    var red      = 'ff0000';
    var yellow   = 'ffff00';
@@ -102,9 +147,9 @@ function colorPrepare(HexColor){
    var cyan     = '00ffff';
 */
   
-   module.exports.colorPrepare = colorPrepare;
+   module.exports.getHexagons = getHexagons;
   
-   // only colorPrepare needs export
+   // only getHexagons() needs export
 
     // module.exports.colorAdjust = colorAdjust;
     // module.exports.closest = closest;
