@@ -3,7 +3,7 @@
 Das Projekt Hexaposer entstand im Rahmen der Veranstaltung Audio-Video Programmierung an der Hochschule für angewandte Wissenschaften Hamburg.
 Ziel des Kurses war es erste Erfahrung mit C++ und der WebAudio API zu erlangen und diese in unserem Projekt umzusetzen und vorzustellen.
 
-* Hextractor: [link](https://github.com/wavy1/hexposer_image_processor)
+* Hextractor/ hexposer_image_processor: [link](https://github.com/wavy1/hexposer_image_processor)
 * nodejs: [link](https://nodejs.org/)
 * npm: [link](https://www.npmjs.com/)
 
