@@ -1,23 +1,18 @@
 {
   "name": "hexaposer_server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "run_without_hextractor.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "node-gyp rebuild"
+    "start": "node run_without_hextractor.js",
+    "all": "node run.js"
   },
   "author": "Bager Bingoel, Wladimir Nabok, Klaus Bochmann",
   "license": "ISC",
   "dependencies": {
-    "bindings": "*",
     "express": "^4.16.4",
-    "node-addon-api": "*",
     "pug": "^2.0.3"
   },
-  "gypfile": true,
   "description": "Hexaposer_Package",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wavy1/Hexaposer.git"
