@@ -16,7 +16,6 @@ html(lang='zxx')
       link(rel="stylesheet" href="../css/button.css" type="text/css" media="all")
       link(rel="stylesheet" href="../css/hexagon.css" type="text/css" media="all")
       link(rel="stylesheet" href="../css/sidebar.css" type="text/css" media="all")
-      // link(rel="stylesheet" href="../css/SidebarNav.min.css" type="text/css" media="all")
       link(rel="stylesheet" href="../css/slider.css" type="text/css" media="all")
       link(rel="stylesheet" href="../css/style.css" type="text/css" media="all")
       
@@ -54,34 +53,6 @@ html(lang='zxx')
                         figure(id=ident class=classes)
 
          .main-left
-            // Slider: Nur zum Testen. Wird wieder gelöscht!
-            //div#gainContainer Gain
-               input#gainSlider.slider(type="range" min="0" max="100" value="10")
-               span#gainOutput 1.0 dB
-
-            //div#delayContainer Delay
-               input#delaySlider.slider(type="range" min="0" max="100" value="0")
-               span#delayOutput 0 sec
-
-            //div#panningContainer StereoPanning
-               input#panningSlider.slider(type="range" min="0" max="100" value="50")
-               span#panningOutput 0 LR
-
-            //div#distortionContainer Distortion
-               input#distortionSlider.slider(type="range" min="0" max="100" value="0")
-               span#distortionOutput 0
-
-            //div#frequencyContainer Frequency
-               input#frequencySlider.slider(type="range" min="0" max="20000" value="1000")
-               span#frequencyOutput 1000 HZ
-
-            //div#kneeContainer Knee
-               input#kneeSlider.slider(type="range" min="0" max="100" value="75")
-               span#kneeOutput 30 degree
-               
-            //div#attackContainer Attack
-               input#attackSlider.slider(type="range" min="0" max="1000" value="3")
-               span#attackOutput 0.003 sec
 
             // Play/PauseButton
             #playStopButton
@@ -121,13 +92,13 @@ html(lang='zxx')
                            h2 WaveshaperNode (Rot)
                            h6 Mit dem WaveshaperNode-Modul werden Audiosignale mit einer dynamischen Verzerrung hinterlegt.
                         li.treeview
-                           h2 BiquadFilterNode.Frequenz (Orange)
-                           h6 
+                           h2 BiquadFilterNode: Frequenz (Orange)
+                           h6 Je höher/kleiner die Frequenz(Schwingungszahl), desto höher/tiefer der Ton.
                         li.treeview
-                           h2 BiquadFilterNode Typ:Lowpass (Purple)
+                           h2 BiquadFilterNode: Typ:Lowpass (Purple)
                            h6 Mit der BiquadFilterNode-Schnittstelle(Typ:Lowpass) werden Signale mit Frequenzen unterhalb ihrer Grenzfrequenz ungeschwächt passieren gelassen, während Anteile mit höherer Frequenzen gedämpft werden.
                         li.treeview
-                           h2 BiquadFilterNode Typ:Highpass (Türkis)
+                           h2 BiquadFilterNode: Typ:Highpass (Türkis)
                            h6 Mit der BiquadFilterNode-Schnittstelle(Typ:Highpass) werden Signale mit Frequenzen oberhalb ihrer Grenzfrequenz ungeschwächt passieren gelassen, während Anteile mit niedrigen Frequenzen gedämpft werden.
 
                            .clear      
