@@ -11,7 +11,6 @@ var delay = context.createDelay(4.0);
 var stereoPanner = context.createStereoPanner();
 var distortion = context.createWaveShaper();
 var biquadFilter = context.createBiquadFilter();
-//var compressor = context.createDynamicsCompressor();
 
 source.connect(gain);
 gain.connect(delay);
@@ -19,8 +18,6 @@ delay.connect(stereoPanner);
 stereoPanner.connect(distortion);
 distortion.connect(biquadFilter);
 biquadFilter.connect(context.destination);
-// biquadFilter.connect(compressor);
-//compressor.connect(context.destination);
 
 var HexBlue = document.getElementById("hexBlue");
 var HexYellow = document.getElementById("hexYellow");
@@ -33,7 +30,6 @@ var HexPink = document.getElementById("hexPink");
 var HexGrey = document.getElementById("hexGrey");
 
 //GAIN
-
 if($(HexBlue).css('visibility') =='visible') {
     var gainValue = 1;  //Je höher, desto lauter
     gain.gain.value = gainValue;
@@ -42,7 +38,6 @@ if($(HexBlue).css('visibility') =='visible') {
 }
 
 //DELAY
-
 if($(HexGrey).css('visibility') =='visible') {
     var delayValue = 0; //0Sek nach Klick auf dem PlayStopButton wird Sound abgespielt oder pausiert
     delay.delayTime.value = delayValue;
@@ -51,7 +46,6 @@ if($(HexGrey).css('visibility') =='visible') {
 }
 
 //STEREOPANNER
-
 if($(HexGreen).css('visibility') =='visible') {
     var panValue = 0;   //-1=Links, 0=Normal, +1=Rechts
     stereoPanner.pan.value = panValue;
@@ -60,7 +54,6 @@ if($(HexGreen).css('visibility') =='visible') {
 }
 
 //DISTORTION
-
 distortion.curve = makeDistortionCurve(0);
 distortion.oversample = "4x";
 
@@ -84,8 +77,7 @@ if($(HexRed).css('visibility') =='visible') {
     //distortion.curve = makeDistortionCurve(Number(this.value));
 }
 
-//BIQUADFILTER.FREQUENCY
-
+//BIQUADFILTER: FREQUENCY
 if($(HexOrange).css('visibility') =='visible') {
     biquadFilter.frequency.value = 350; //350 = Standartwert = Es sind keine Veränderungen in der Soundausgabe zu hören
 } else if ($(HexOrange).css('visibility') =='hidden') {
@@ -93,7 +85,6 @@ if($(HexOrange).css('visibility') =='visible') {
 }
 
 //BIQUADFILTER.TYPE = "LOWPASS" AND "HIGHPASS" AND "LOWSHELF"
-
 if($(HexPurple).css('visibility') =='visible') {
     biquadFilter.type = "lowpass";
 } else if ($(HexTurquoise).css('visibility') =='visible') {
@@ -104,24 +95,7 @@ if($(HexPurple).css('visibility') =='visible') {
     biquadFilter.type !== "lowpass" && biquadFilter.type !== "highpass";
 }
 
-//COMPRESSOR.KNEE
-
-// if($(HexPurple).css('visibility') =='visible') {
-//     compressor.knee.value = 5000;
-// } else if ($(HexPurple).css('visibility') =='hidden') {
-//     compressor.knee.value.disabled;
-// }
-
-//COMPRESSOR.ATTACK
-
-// if($(HexGrey).css('visibility') =='visible') {
-//     compressor.attack.value = 5000;
-// } else if ($(HexPurple).css('visibility') =='hidden') {
-//     compressor.attack.value.disabled;
-// }
-
 //PLAY/STOP-BUTTON
-
 playStopButton.addEventListener("click", function() {
     if (isPlaying) {
         sound.pause();
