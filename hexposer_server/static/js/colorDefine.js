@@ -94,7 +94,7 @@ function colorPrepare(HexColor){
 
 var getHexagons = function() {
     // open json and read to buffer
-    let myjson = fs.readFileSync('info.json');
+    let myjson = fs.readFileSync('example_info.json');
         // parsing the json data
         var test = JSON.parse(myjson);
   // creating the hexgons array
