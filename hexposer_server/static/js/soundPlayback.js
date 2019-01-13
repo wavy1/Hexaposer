@@ -23,13 +23,13 @@ biquadFilter.connect(context.destination);
 //compressor.connect(context.destination);
 
 var HexBlue = document.getElementById("hexBlue");
-var HexYellow = document.getElementById("hexGrey");
+var HexYellow = document.getElementById("hexYellow");
 var HexGreen = document.getElementById("hexGreen");
 var HexRed = document.getElementById("hexRed");
 var HexOrange = document.getElementById("hexOrange");
 var HexPurple = document.getElementById("hexPurple");
 var HexTurquoise = document.getElementById("hexTurquoise");
-var HexPurple = document.getElementById("hexPurple");
+var HexPink = document.getElementById("hexPink");
 var HexGrey = document.getElementById("hexGrey");
 
 //GAIN
