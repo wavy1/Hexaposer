@@ -46,7 +46,7 @@
     position: absolute;
     /*transform:  translate(100%, 0%);*/
     background: #fff;
-    visibility: hidden;
+    visibility: visible;
 }
 
 .hexagonYELLOW:before,
@@ -292,7 +292,7 @@
     position: absolute;
     /*transform:  translate(100%, 300%);*/
     background: #fff;
-    visibility: hidden;
+    visibility: visible;
 }
 
 .hexagonPINK:before,

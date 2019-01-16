@@ -10,7 +10,7 @@ OUR_COLORS = {
    Green: '#00ff00', //green
    Blue: '#0000ff', //blue
    Purple: '#990099', //purple
-   Grey: '#999999', //grey
+   Grey: '#ffffff', //grey
    Cyan: '#00ffff'  //cyan
    };
 
@@ -109,7 +109,7 @@ function colorPrepare(HexColor){
 
 var getHexagons = function() {
     // open json and read to buffer
-    let myjson = fs.readFileSync('example_info.json');
+    let myjson = fs.readFileSync('info.json');
         // parsing the json data
         var test = JSON.parse(myjson);
   // creating the hexgons array
