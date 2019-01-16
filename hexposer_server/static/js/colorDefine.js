@@ -1,4 +1,19 @@
 var fs = require('fs');
+var nearestColor = require('./nearestColor.js');
+
+//The Map of colors we use
+OUR_COLORS = {
+   Red: '#ff0000', //red
+   Yellow: '#ffff00', //yellow
+   Pink: '#ff99ff', //pink
+   Orange: '#ff9900', //orange
+   Green: '#00ff00', //green
+   Blue: '#0000ff', //blue
+   Purple: '#990099', //purple
+   Grey: '#999999', //grey
+   Cyan: '#00ffff'  //cyan
+   };
+
 
 /* function to transform a Hex_Color value  to a rgb value {0-255,0-255,0-255}
 
@@ -104,48 +119,21 @@ var getHexagons = function() {
    hexagons[i] = test.Hexagons[i];
   }
   
-  // console.log(hexagons);
-  
-  
-  /*Color correction for the .json data */
+  /*
+  Color correction for the .json data
+
+  first create a function to match against OUR_COLORS
+  iterate hexagons[] colors and match for the name
+  */
+  var colorMatcher = nearestColor.from(OUR_COLORS);
+
   for(var i = 0; i < hexagons.length; i++){
-     hexagons[i].color = colorPrepare(hexagons[i].color);
-     if (hexagons[i].color == 'ff0000'){
-        hexagons[i].color = 'Red';
-     }
-     else if(hexagons[i].color == 'ff9900'){
-        hexagons[i].color = 'Orange';
-     }
-     else if(hexagons[i].color == '00ff00'){
-        hexagons[i].color = 'Green';
-     }
-     else if(hexagons[i].color == '0000ff'){
-        hexagons[i].color = 'Blue';
-     }
-     else if(hexagons[i].color == '990099'){
-        hexagons[i].color = 'Purple';
-     }
-     else if(hexagons[i].color == '999999'){
-        hexagons[i].color = 'Grey';
-     }
-     else if(hexagons[i].color == '00ffff'){
-        hexagons[i].color = 'Turquoise';
-     }
+     var match = colorMatcher(hexagons[i].color);
+     hexagons[i].color = match.name;
   }
+
   return hexagons;
 }
-
-/*  our color list for reference
-   var red      = 'ff0000';
-   var yellow   = 'ffff00';
-   var pink     = 'ff99ff';
-   var orange   = 'ff9900';
-   var green    = '00ff00';
-   var blue     = '0000ff';
-   var purple   = '990099';
-   var grey     = '999999';
-   var cyan     = '00ffff';
-*/
   
    module.exports.getHexagons = getHexagons;
   
