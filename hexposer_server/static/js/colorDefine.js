@@ -3,15 +3,15 @@ var nearestColor = require('./nearestColor.js');
 
 //The Map of colors we use
 OUR_COLORS = {
-   Red: '#ff0000', //red
-   Yellow: '#ffff00', //yellow
-   Pink: '#ff99ff', //pink
-   Orange: '#ff9900', //orange
-   Green: '#00ff00', //green
-   Blue: '#0000ff', //blue
-   Purple: '#990099', //purple
-   Grey: '#ffffff', //grey
-   Cyan: '#00ffff'  //cyan
+   Red: '#c8443f', //red
+   Yellow: '#6a6433', //yellow
+   Pink: '#ae7783', //pink
+   Orange: '#733423', //orange
+   Green: '#2e5244', //green
+   Blue: '#294069', //blue
+   Purple: '#582c38', //purple
+   Grey: '#141416', //grey
+   Cyan: '#1e4773'  //cyan
    };
 
 
