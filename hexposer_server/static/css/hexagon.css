@@ -404,22 +404,22 @@
 
     /*-- Z2 --*/
 .y-1z2{
-    transform : translate(180%, 0%) rotate(30deg);
+    transform : translate(180%, -185%) rotate(30deg);
     }
 .y0z2{
-    transform : translate(180%, 185%) rotate(30deg);
+    transform : translate(180%, 0%) rotate(30deg);
     }
 .y1z2{
-    transform : translate(180%, 375%) rotate(30deg);
+    transform : translate(180%, 185%) rotate(30deg);
     }
 .y2z2{
-    transform : translate(180%, 555%) rotate(30deg);
+    transform : translate(180%, 370%) rotate(30deg);
     }
 .y3z2{
-    transform : translate(180%, 740%) rotate(30deg);
+    transform : translate(180%, 555%) rotate(30deg);
     }    
 .y4z2{
-    transform : translate(180%, 885%) rotate(30deg);
+    transform : translate(180%, 740%) rotate(30deg);
     }
 
     /*-- Z3 --*/
@@ -441,22 +441,22 @@
     
     /*-- Z4 --*/
 .y-1z4{
-    transform : translate(360%, 0%) rotate(30deg);
+    transform : translate(360%, -185%) rotate(30deg);
     }
 .y0z4{
-    transform : translate(360%, 185%) rotate(30deg);
+    transform : translate(360%, 0%) rotate(30deg);
     }
 .y1z4{
-    transform : translate(360%, 375%) rotate(30deg);
+    transform : translate(360%, 185%) rotate(30deg);
     }
 .y2z4{
-    transform : translate(360%, 555%) rotate(30deg);
+    transform : translate(360%, 370%) rotate(30deg);
     }
 .y3z4{
-    transform : translate(360%, 740%) rotate(30deg);
+    transform : translate(360%, 555%) rotate(30deg);
     }    
 .y4z4{
-    transform : translate(360%, 885%) rotate(30deg);
+    transform : translate(360%, 740%) rotate(30deg);
     }
     
     /*-- Z5 --*/
@@ -478,22 +478,22 @@
     
         /*-- Z6 --*/
 .y-1z6{
-    transform : translate(540%, 0%) rotate(30deg);
+    transform : translate(540%, -185%) rotate(30deg);
     }
 .y0z6{
-    transform : translate(540%, 185%) rotate(30deg);
+    transform : translate(540%, 0%) rotate(30deg);
     }
 .y1z6{
-    transform : translate(540%, 375%) rotate(30deg);
+    transform : translate(540%, 185%) rotate(30deg);
     }
 .y2z6{
-    transform : translate(540%, 555%) rotate(30deg);
+    transform : translate(540%, 370%) rotate(30deg);
     }
 .y3z6{
-    transform : translate(540%, 740%) rotate(30deg);
+    transform : translate(540%, 555%) rotate(30deg);
     }    
 .y4z6{
-    transform : translate(540%, 885%) rotate(30deg);
+    transform : translate(540%, 740%) rotate(30deg);
     }
 
         /*-- Z7 --*/
